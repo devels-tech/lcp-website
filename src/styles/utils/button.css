@@ -1,0 +1,21 @@
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.buttonScroll {
+  @apply text-xl p-1 border border-solid border-white rounded-full flex justify-center items-center;
+  animation: bounce 2s ease infinite 1s;
+  background-color: rgba(0,0,0,0.6);
+}

@@ -1,0 +1,85 @@
+@import './utils/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './utils/footer.css';
+@import './utils/swiper.css';
+@import './utils/button.css';
+@import './utils/resources.css';
+@import './utils/articles.css';
+@import './utils/prayRequest.css';
+@import './utils/loaders.css';
+@import './utils/inputs.css';
+@import './utils/modals.css';
+@import './utils/logo.css';
+@import './utils/styledMarkdown.css';
+@import './utils/icons.css';
+@import './utils/tooltips.css';
+@import './utils/pages.css';
+@import './utils/index.css';
+
+@import './components/events.css';
+
+.full-image {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.type-articles {
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  width: initial;
+  height: 100%;
+  background: none;
+  opacity: 1;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  max-width: 100%;
+}
+
+.type-articles-img-wrapper {
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  width: initial;
+  height: initial;
+  background: none;
+  opacity: 1;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  max-width: 100%;
+}
+
+.pray-img-wrapper {
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: none;
+  opacity: 1;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  max-width: 100%;
+}

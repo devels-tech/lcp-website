@@ -1,0 +1,8 @@
+.modalOverlay {
+  background-color: rgba(0,0,0,.6);
+  @apply flex justify-center items-center fixed inset-0 w-full h-full z-50;
+}
+
+.modal {
+  @apply p-3 w-fit text-center rounded bg-white;
+}

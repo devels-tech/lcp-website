@@ -1,0 +1,5 @@
+export { Slider } from './SliderHome'
+export { WorshipSchedule } from './WorshipSchedule'
+export { Devotionals } from './Devotionals'
+export { PrayRequest } from './PrayRequest'
+export { Resources } from './Resources'

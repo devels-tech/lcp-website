@@ -1,0 +1,9 @@
+/* PrayRequest Section Styles */
+
+.prayRequestWrapper {
+  @apply w-full h-screen relative overflow-hidden;
+}
+
+.prayRequestWrapper img {
+  object-position: 34% 50%; /* En mobile acomodamos la imagen hacia la derecha */
+}

@@ -1,0 +1,6 @@
+
+/* Pages */
+
+.pageWrapper {
+  @apply min-h-screen-14 w-full md:min-h-screen-10;
+}

@@ -1,0 +1,9 @@
+.footer__socialMedia:last-child {
+  margin-right: 0;
+}
+
+@media (min-width: 768px) {
+  .footerLogo {
+    left: calc(50% - (4.5rem / 2));
+  }
+}

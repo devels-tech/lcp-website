@@ -1,0 +1,41 @@
+.actualLogo{
+  margin: 0 calc((450px - 387px) / 2);
+}
+
+/* Logo Footer */
+
+@screen md {
+  .logoWrapper {
+    position: absolute;
+    left: calc(50% - (4.5rem / 2));
+  }
+}
+
+/* Logo Navbar */
+
+.logo__container {
+  @apply mx-auto mb-20 relative order-1;
+}
+
+.logo__figure {
+  height: 150px;
+  width: 90px;
+  padding: .25rem .75rem .75rem .75rem;
+  background-color: rgba(30, 71, 141, 1);
+  border-radius: 0px 0px 3px 3px;
+  -webkit-box-align: center;
+  align-items: center;
+  box-shadow: rgb(0 0 0 / 33%) 4px 7px 15px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  clip-path: inset(0px 0px 25%);
+  filter: drop-shadow(rgba(0, 0, 0, 0.33) 4px 7px 15px);
+  padding-top: 28px;
+}
+
+@screen lg {
+  .logo__figure {
+    transform: translateY(74px);
+  }
+}

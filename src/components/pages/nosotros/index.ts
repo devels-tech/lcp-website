@@ -1,0 +1,7 @@
+export { AboutUs } from './AboutUs'
+export { Header } from './Header'
+export { MisionAndVision } from './MisionAndVision'
+export { OurFivePurposes } from './OurFivePurposes'
+export { OurPastor } from './OurPastor'
+export { Video16Anniversary } from './Video16Anniversary'
+export { Logos } from './Logos'

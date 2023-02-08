@@ -1,0 +1,29 @@
+.event_item {
+  @apply bg-gray-500 rounded-xl overflow-hidden mb-5 md:flex-row md:mr-5;
+  /* width: 300px; */
+  width: 100%;
+  height: 350px;
+
+  @media (min-width: 768px) {
+    width: 350px;
+    height: 400px;
+  }
+}
+
+.event_content {
+  @apply w-full h-full flex justify-center items-center relative;
+}
+
+.event_content--text {
+  @apply text-center absolute text-white mt-4;
+}
+
+.event_overlay {
+  @apply absolute inset-0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.event_overlay:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

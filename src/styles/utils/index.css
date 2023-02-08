@@ -1,0 +1,85 @@
+.imagesWrapper {
+  @apply w-full md:w-3/4 lg:w-1/2 2xl:w-2/5 3xl:w-35%;
+}
+
+.imagesWrapper img {
+  object-fit: cover;
+}
+
+/* Component - MisionAndVision - imagesGrid */
+
+.imagesGrid {
+  margin-top: 2rem;
+  margin-left: -10vw;
+  margin-right: -10vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.imagesGrid img {
+  object-fit: cover;
+}
+
+@screen md {
+  .imagesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Component - HeaderPage - titleContent */
+
+.headerPage__titleContent {
+  @apply text-5xl relative mt-8 text-white font-light text-right;
+  letter-spacing: .65rem;
+}
+
+.headerPage__titleContent:hover h4 {
+  @apply text-6xl;
+  font-family: 'pacifico' !important;
+  letter-spacing: 0px;
+}
+
+@screen md {
+  .headerPage__titleContent{
+    @apply text-8xl;
+  }
+
+  .headerPage__titleContent:hover h4 {
+    @apply text-9xl;
+  }
+}
+
+@screen 2xl {
+  .headerPage__titleContent{
+    @layer text-10xl;
+  }
+
+  .headerPage__titleContent:hover h4 {
+    @layer text-10xl;
+  }
+}
+
+/* Navlink Desktop - *Tienda* */
+
+.navlink__commingSoon--wrapper {
+  @apply mx-5 3xl:mx-7 relative inline-block select-none font-bold text-primary-500 hover:text-secondary-500;
+}
+
+/* Nosotros - Our Pastor - Letras */
+
+.pastorPhrase {
+  @apply text-xl text-white font-black w-full sm:text-2xl sm:w-fit lg:text-4xl;
+  background-color: rgb(30, 71, 141);
+  box-shadow: rgb(0 0 0 / 68%) 0px 0px 10px;
+  padding: 0.175rem 0.65rem;
+  margin: 0.45rem 0px;
+  letter-spacing: 0.15rem;
+}
+
+
+/* Nosotros - HeaderPage - Image Background */
+
+.headerPage__nosotros--BgImg {
+  filter: brightness(40%) !important;
+}

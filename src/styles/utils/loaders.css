@@ -1,0 +1,14 @@
+@keyframes spin {
+  0% {
+    transfrom: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+.spinner {
+  @apply border-8 border-solid border-primary-400 w-16 h-16 rounded-full;
+  border-left-color: transparent;
+  animation: spin 1s linear infinite;
+}

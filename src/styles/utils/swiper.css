@@ -1,0 +1,13 @@
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-primary-500 !important;
+}
+
+.swiper-pagination-active {
+  background: white !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet {
+  @apply lg:h-3 lg:w-3 3xl:w-4 3xl:h-4 !important;
+}

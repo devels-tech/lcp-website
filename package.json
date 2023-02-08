@@ -1,0 +1,63 @@
+{
+  "name": "lcp-website",
+  "version": "1.2.0",
+  "contributors": [
+    "kevelscy",
+    "mappedev"
+  ],
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --fix",
+    "postinstall": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint '*/**/*.{js,jsx}' --fix"
+    ]
+  },
+  "dependencies": {
+    "@tailwindcss/line-clamp": "0.4.2",
+    "@tailwindcss/typography": "0.5.9",
+    "@tanem/react-nprogress": "5.0.26",
+    "firebase": "9.17.1",
+    "js-cookie": "3.0.1",
+    "next": "13.1.6",
+    "node-fetch": "3.3.0",
+    "react": "18.2.0",
+    "react-cool-portal": "1.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "7.43.1",
+    "react-loading-skeleton": "3.1.0",
+    "react-toastify": "9.1.1",
+    "swiper": "9.0.3",
+    "zustand": "4.3.2"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "3.0.2",
+    "@types/node": "18.13.0",
+    "@types/node-fetch": "2.6.2",
+    "@types/react": "18.0.27",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "autoprefixer": "10.4.13",
+    "eslint": "^8.33.0",
+    "eslint-config-next": "^13.1.6",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "8.0.3",
+    "lint-staged": "13.1.1",
+    "postcss": "8.4.21",
+    "tailwindcss": "3.2.4",
+    "typescript": "4.9.5"
+  }
+}

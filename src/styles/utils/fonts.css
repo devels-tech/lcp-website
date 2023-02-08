@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'pacifico';
+  src: url("/static/fonts/pacifico.ttf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "helvetica_neue";
+  src: url("/static/fonts/helvetica_neue/helveticaNeue_light.ttf");
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "helvetica_neue";
+  src: url("/static/fonts/helvetica_neue/helveticaNeue_light.ttf");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "helvetica_neue";
+  src: url("/static/fonts/helvetica_neue/helveticaNeue_light.ttf");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "helvetica_neue";
+  src: url("/static/fonts/helvetica_neue/helveticaNeue_regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "helvetica_neue";
+  src: url("/static/fonts/helvetica_neue/helveticaNeue_regular.ttf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "helvetica_neue";
+  src: url("/static/fonts/helvetica_neue/helveticaNeue_regular.ttf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "helvetica_neue";
+  src: url("/static/fonts/helvetica_neue/helveticaNeue_bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "helvetica_neue";
+  src: url("/static/fonts/helvetica_neue/helveticaNeue_bold.ttf");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "helvetica_neue";
+  src: url("/static/fonts/helvetica_neue/helveticaNeue_blackCond.otf");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}

@@ -1,0 +1,25 @@
+/* Icon Default Css */
+
+.iconStylesDefault path {
+  fill: 'rgba(30, 71, 141, 1)';
+}
+
+.iconStylesDefault path.iconWhite {
+  fill: white;
+}
+
+.iconStylesDefault stop {
+  stop-color: white;
+}
+
+.iconStylesDefault:hover  path {
+  fill: rgb(251, 191, 36);
+}
+
+.iconStylesDefault:hover stop {
+  stop-color: rgb(251, 191, 36);
+}
+
+.iconStylesDefault {
+  @apply cursor-pointer;
+}
