@@ -13,16 +13,16 @@ module.exports = {
       },
       {
         source: '/recursos',
-        destination: '/recursos/espiritu',
+        destination: '/recursos/espiritu'
       },
       {
         source: '/tienda',
-        destination: '/',
+        destination: '/'
       },
       {
         source: '/reservaciones',
-        destination: '/',
-      },
+        destination: '/'
+      }
     ]
   }
 }
