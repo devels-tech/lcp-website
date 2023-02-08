@@ -9,7 +9,7 @@ module.exports = {
     return [
       {
         source: '/api/:path*',
-        destination: 'to_change/api/:path*'
+        destination: 'https://to-change/api/:path*'
       },
       {
         source: '/recursos',
