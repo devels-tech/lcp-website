@@ -22,6 +22,10 @@ module.exports = {
       {
         source: '/reservaciones',
         destination: '/'
+      },
+      {
+        source: '/eventos/edc',
+        destination: '/eventos'
       }
     ]
   }
