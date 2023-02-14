@@ -55,7 +55,7 @@ export const Event = ({ imgSrc, localImage, title, description, redirectTo, redi
         </div>
       </article>
 
-      <Link href={redirectTo} className='w-[300px] block py-2 border border-secondary-500 rounded-md text-center hover:bg-secondary-500 hover:text-white'>
+      <Link href={redirectTo} className='w-full block py-2 border border-secondary-500 rounded-md text-center hover:bg-secondary-500 hover:text-white'>
         <span className='text-lg font-bold'>
           {redirectLabel}
         </span>

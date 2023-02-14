@@ -8,7 +8,7 @@ import { PAGE_INFO } from '@/config'
 import { Event } from '@/components/pages/eventos/Event'
 // import { Event } from '@/components/pages/eventos/Event'
 import bautizosImgSrc from 'public/img/local-events/bautizoBg.webp'
-import edcImgSrc from 'public/img/local-events/edc.webp'
+// import edcImgSrc from 'public/img/local-events/edc.webp'
 // import { Event } from '@/components/pages/eventos/Event'
 
 const { SEO } = PAGE_INFO
