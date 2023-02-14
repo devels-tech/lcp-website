@@ -29,14 +29,14 @@ export const EventosPage: Page = () => {
           <br />
 
           <ul className='flex flex-wrap justify-center items-center max-w-5xl gap-x-2'>
-            <li>
+            {/* <li>
               <Event
                 localImage={edcImgSrc}
                 title='Inscripciones EDC'
                 redirectTo='/eventos/edc'
                 redirectLabel='Inscripciones EDC'
               />
-            </li>
+            </li> */}
 
             <li>
               <Event
