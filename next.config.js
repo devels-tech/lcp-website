@@ -9,7 +9,7 @@ module.exports = {
     return [
       {
         source: '/api/:path*',
-        destination: `${process.env.API_URL}/api/:path*`
+        destination: `${process.env.API_URL || 'https://backend-dev.lcpcaracas.org'}/api/:path*`
       },
       {
         source: '/recursos',
