@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 import { IconFacebook, IconInstagram, IconYoutube } from '@/components/common/Icons'
@@ -6,6 +6,7 @@ import { IconFacebook, IconInstagram, IconYoutube } from '@/components/common/Ic
 import logoImg from 'public/img/logo.webp'
 
 export const Footer = () => {
+  const [currentYear, setCurrentYear] = useState<number>()
   const { current: rrss } = useRef([
     {
       link: 'https://www.youtube.com/channel/UCtttlnW0skxAug4MOo7CaeQ',
@@ -21,10 +22,15 @@ export const Footer = () => {
     }
   ])
 
+  useEffect(() => {
+    const year = new Date().getFullYear()
+    setCurrentYear(year)
+  }, [])
+
   return (
     <footer className='w-full h-full text-white py-10 bg-gradient-to-t from-primary-400 to-primary-500'>
       <div className='flex flex-col justify-between items-center px-4 relative md:flex-row'>
-        <section className='font-bold'>LCP Caracas - 2021 ©</section>
+        <section className='font-bold'>LCP Caracas - {currentYear} ©</section>
 
         <section className='md:absolute footerLogo'>
           <div className='my-6' style={{ width: '4.5rem' }}>
