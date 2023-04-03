@@ -38,12 +38,21 @@ export const EventosPage: Page = () => {
               />
             </li> */}
 
-            <li>
+            {/* <li>
               <Event
                 imgSrc={bautizosImgSrc}
                 title='Bautizos'
                 redirectTo='/eventos/bautizos'
                 redirectLabel='Inscripción de Bautizos'
+              />
+            </li> */}
+
+            <li>
+              <Event
+                imgSrc={bautizosImgSrc}
+                title='Alabanza'
+                redirectTo='/eventos/alabanza-casting'
+                redirectLabel='Inscripción para el casting de alabanza'
               />
             </li>
           </ul>
