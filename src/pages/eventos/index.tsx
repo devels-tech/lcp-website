@@ -7,7 +7,7 @@ import MainLayout from '@/layouts/Main'
 import { PAGE_INFO } from '@/config'
 import { Event } from '@/components/pages/eventos/Event'
 // import { Event } from '@/components/pages/eventos/Event'
-import bautizosImgSrc from 'public/img/local-events/bautizoBg.webp'
+import audicionesSrc from 'public/img/local-events/audiciones.png'
 // import edcImgSrc from 'public/img/local-events/edc.webp'
 // import { Event } from '@/components/pages/eventos/Event'
 
@@ -38,12 +38,21 @@ export const EventosPage: Page = () => {
               />
             </li> */}
 
-            <li>
+            {/* <li>
               <Event
                 imgSrc={bautizosImgSrc}
                 title='Bautizos'
                 redirectTo='/eventos/bautizos'
                 redirectLabel='Inscripción de Bautizos'
+              />
+            </li> */}
+
+            <li>
+              <Event
+                imgSrc={audicionesSrc}
+                title='Alabanza'
+                redirectTo='/eventos/alabanza-casting'
+                redirectLabel='Ministerio de Alabanza - Audiciones'
               />
             </li>
           </ul>
