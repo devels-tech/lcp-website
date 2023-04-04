@@ -13,7 +13,7 @@ export const Navbar = () => {
       { to: '/', label: 'Inicio' },
       { to: '/nosotros', label: 'Nosotros' },
       { to: '/devocionales', label: 'Devocionales' },
-      { to: '/', label: 'Tienda' }
+      { to: '/eventos/alabanza-casting', label: 'Audiciones' }
     ],
     centerItem: <Logo />,
     rightItems: [

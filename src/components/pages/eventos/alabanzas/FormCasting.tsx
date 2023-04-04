@@ -6,6 +6,8 @@ import { Button } from '@/components/common/Button'
 
 import { rules } from './formConfig'
 import { registerUserCasting } from './registerUserCasting'
+import { useState } from 'react'
+import { Spinner } from '@/components/common/Loaders'
 
 interface IDataFormCasting {
   firstName: string
@@ -18,27 +20,51 @@ interface IDataFormCasting {
 
 export const FormCasting = () => {
   const router = useRouter()
+  const [isLoading, setIsloading] = useState(false)
   const { register, handleSubmit, formState: { errors }, reset } = useForm<IDataFormCasting>()
 
   const onSubmit = async (data: IDataFormCasting) => {
+    setIsloading(true)
+
     const { data: resData } = await registerUserCasting(data)
 
     if (!resData) {
       toast('¡Hubo un error!', { type: 'error' })
+      setIsloading(false)
       return
     }
 
-    toast('¡Inscripccion Exitosa!', { type: 'success' })
+    toast('¡Inscripcción Exitosa! Pronto contactaremos contigo', { type: 'success' })
     reset()
+
+    setIsloading(false)
     router.push('/')
   }
 
-  return (
-    <form className='w-full max-w-lg mx-auto text-center px-4' onSubmit={handleSubmit(onSubmit)}>
-      <h3 className='text-4xl text-secondary-500 font-black xl:text-5xl 3xl:text-6xl'>Inscripciones del<br /> Casting</h3>
-      <br />
+  if (isLoading) {
+    return (
+      <div className='w-full flex flex-col justify-center items-center'>
+        <span className='text-2xl font-bold mb-3'>Cargando Informacion</span>
+        <Spinner />
+      </div>
+    )
+  }
 
-      <div className='text-left'>
+  return (
+    <form className='w-full max-w-lg mx-auto text-center pr-4 pl-8' onSubmit={handleSubmit(onSubmit)}>
+      <h3 className='text-4xl text-secondary-500 font-black xl:text-5xl 3xl:text-6xl'>
+        Ministerio de Alabanza<br /> Audiciones
+      </h3>
+
+      <div className='mt-4'>
+        <span>
+          <strong>Lugar:</strong> Iglesia La Casa de mi Padre <br />
+          <strong>Fecha:</strong> Sabado 22/04/2023 <br />
+          <strong>Hora:</strong> 11:00 am
+        </span>
+      </div>
+
+      <div className='text-left mt-2'>
         <input
           className='inputText'
           aria-label='firstName'
@@ -107,7 +133,7 @@ export const FormCasting = () => {
             className='font-bold'
             htmlFor='typeCasting'
           >
-            ¿A que vas a audicionar?
+            ¿Instrumento a audicionar?
           </label>
 
           <select
@@ -119,21 +145,22 @@ export const FormCasting = () => {
             placeholder='SINGING'
             {...register('typeCasting', rules.typeCasting)}
           >
-            <option className='text-black' value='SINGING'>Cantante</option>
-            <option className='text-black' value='PIANIST'>Pianista</option>
-            <option className='text-black' value='GUITARIST'>Guitarrista</option>
-            <option className='text-black' value='BASSIST'>Bajista</option>
-            <option className='text-black' value='DRUMMER'>Baterista</option>
-            <option className='text-black' value='TRUMPET'>Trompetista</option>
-            <option className='text-black' value='TROMBONE'>Trombonista</option>
-            <option className='text-black' value='SAXOPHONE'>Saxofonista</option>
+            <option className='text-black' value='PIANIST'>Piano</option>
+            <option className='text-black' value='SINGING'>Canto</option>
+            <option className='text-black' value='GUITARIST'>Guitarra</option>
+            <option className='text-black' value='BASSIST'>Bajo</option>
+            <option className='text-black' value='DRUMMER'>Bateria</option>
+            <option className='text-black' value='TRUMPET'>Trompeta</option>
+            <option className='text-black' value='TROMBONE'>Trombon</option>
+            <option className='text-black' value='SAXOPHONE'>Saxofon</option>
+            <option className='text-black' value='PERCUSION'>Percusión</option>
             <option className='text-black' value='OTHER'>Otro</option>
           </select>
           {errors.typeCasting && <p className='text-sm text-red-600'>{errors.typeCasting.message}</p>}
         </div>
       </div>
 
-      <Button classes='py-1 mt-4' tabIndex={10} type='submit'>
+      <Button classes='py-1 mt-2 w-full' tabIndex={10} type='submit'>
         Registrar
       </Button>
     </form>

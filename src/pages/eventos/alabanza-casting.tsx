@@ -3,19 +3,37 @@ import Head from 'next/head'
 import { PAGE_INFO } from '@/config'
 
 import { FormCasting } from '@/components/pages/eventos/alabanzas/FormCasting'
+import MainLayout from '@/layouts/Main'
+import { ReactNode } from 'react'
 
 const { SEO } = PAGE_INFO
 
-export default function AlabanzasCastingPage () {
+const AlabanzasCastingPage = () => {
   return (
-    <>
-      <Head>
-        <title>{SEO.TITLE} - Bautizos</title>
-      </Head>
-
-      <div className='w-full py-10 min-h-screen flex flex-col justify-center items-center text-center'>
-        <FormCasting />
+    <div className='w-full max-w-6xl m-auto pb-10 pt-28 px-6 min-h-screen flex flex-col lg:flex-row justify-center items-center text-center'>
+      <div>
+        <img
+          src='/img/casting-bg.jpg'
+          alt='Casting Ministerio de Alabanza'
+          width={1500}
+          height={1100}
+          className='rounded-lg w-full max-w-4xl mr-0 lg:mr-4 mb-8 lg:mb-0'
+        />
       </div>
-    </>
+
+      <FormCasting />
+    </div>
   )
 }
+
+AlabanzasCastingPage.getLayout = (page: ReactNode) => (
+  <MainLayout>
+    <Head>
+      <title>{SEO.TITLE} - Bautizos</title>
+    </Head>
+
+    {page}
+  </MainLayout>
+)
+
+export default AlabanzasCastingPage
