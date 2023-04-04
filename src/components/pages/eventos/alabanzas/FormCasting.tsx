@@ -153,7 +153,6 @@ export const FormCasting = () => {
             <option className='text-black' value='TRUMPET'>Trompeta</option>
             <option className='text-black' value='TROMBONE'>Trombón</option>
             <option className='text-black' value='SAXOPHONE'>Saxofón</option>
-            <option className='text-black' value='PERCUSION'>Percusión</option>
             <option className='text-black' value='OTHER'>Otro</option>
           </select>
           {errors.typeCasting && <p className='text-sm text-red-600'>{errors.typeCasting.message}</p>}
