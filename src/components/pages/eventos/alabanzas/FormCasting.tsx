@@ -149,10 +149,10 @@ export const FormCasting = () => {
             <option className='text-black' value='SINGING'>Canto</option>
             <option className='text-black' value='GUITARIST'>Guitarra</option>
             <option className='text-black' value='BASSIST'>Bajo</option>
-            <option className='text-black' value='DRUMMER'>Bateria</option>
+            <option className='text-black' value='DRUMMER'>Batería</option>
             <option className='text-black' value='TRUMPET'>Trompeta</option>
-            <option className='text-black' value='TROMBONE'>Trombon</option>
-            <option className='text-black' value='SAXOPHONE'>Saxofon</option>
+            <option className='text-black' value='TROMBONE'>Trombón</option>
+            <option className='text-black' value='SAXOPHONE'>Saxofón</option>
             <option className='text-black' value='PERCUSION'>Percusión</option>
             <option className='text-black' value='OTHER'>Otro</option>
           </select>
