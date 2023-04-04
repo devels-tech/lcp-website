@@ -51,12 +51,12 @@ export const FormCasting = () => {
   }
 
   return (
-    <form className='w-full max-w-lg mx-auto text-center pr-4 pl-8' onSubmit={handleSubmit(onSubmit)}>
-      <h3 className='text-4xl text-secondary-500 font-black xl:text-5xl 3xl:text-6xl'>
+    <form className='w-full max-w-lg mx-auto text-center px-0 lg:pr-4 lg:pl-8' onSubmit={handleSubmit(onSubmit)}>
+      <h3 className='text-3xl text-secondary-500 font-black md:text-4xl xl:text-5xl 3xl:text-6xl text-left md:text-center'>
         Ministerio de Alabanza<br /> Audiciones
       </h3>
 
-      <div className='mt-4'>
+      <div className='mt-4 text-left md:text-center'>
         <span>
           <strong>Lugar:</strong> Iglesia La Casa de mi Padre <br />
           <strong>Fecha:</strong> Sabado 22/04/2023 <br />
@@ -133,7 +133,7 @@ export const FormCasting = () => {
             className='font-bold'
             htmlFor='typeCasting'
           >
-            ¿Instrumento a audicionar?
+            Instrumento a audicionar
           </label>
 
           <select
@@ -160,7 +160,7 @@ export const FormCasting = () => {
       </div>
 
       <Button classes='py-1 mt-2 w-full' tabIndex={10} type='submit'>
-        Registrar
+        Enviar Registro
       </Button>
     </form>
   )
