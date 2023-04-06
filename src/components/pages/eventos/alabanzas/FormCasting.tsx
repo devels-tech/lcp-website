@@ -34,7 +34,7 @@ export const FormCasting = () => {
       return
     }
 
-    toast('¡Inscripcción Exitosa! Pronto contactaremos contigo', { type: 'success' })
+    toast('¡Inscripcción Exitosa!', { type: 'success' })
     reset()
 
     setIsloading(false)
