@@ -47,14 +47,14 @@ export const EventosPage: Page = () => {
               />
             </li> */}
 
-            <li>
+<!--             <li>
               <Event
                 imgSrc={audicionesSrc}
                 title='Alabanza'
                 redirectTo='/eventos/alabanza-casting'
                 redirectLabel='Ministerio de Alabanza - Audiciones'
               />
-            </li>
+            </li> -->
           </ul>
 
           {/* <Link href='/'>
@@ -100,6 +100,13 @@ export const EventosPage: Page = () => {
                 </Link>
               </div>
           } */}
+          <div className='pt-20 text-center'>
+                <span className='text-4xl md:text-7xl font-black text-gray-900'>Sin Eventos</span>
+                <br />
+                <Link href='/'>
+                  <a className='text-lg text-secondary-500 xl:text-xl underline underline-offset-1'>Ir al inicio</a>
+                </Link>
+           </div>
         </div>
       </div>
     </>
