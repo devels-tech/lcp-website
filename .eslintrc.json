@@ -32,6 +32,7 @@
         "@next/next/no-img-element": "off",
         "space-before-blocks": "warn",
         "semi":"warn",
-        "keyword-spacing": "warn"
+        "keyword-spacing": "warn",
+        "no-trailing-spaces": "warn"
     }
 }
