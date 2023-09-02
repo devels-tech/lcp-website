@@ -4,10 +4,11 @@ import { getNormalizeLocalDate } from '@/lib/utils/getLocalDate'
 
 interface IDataFormReservation {
   fullName: string
-  email: string
   ci: string
-  levelEDC: string
   phone: string
+  dateBirth: string
+  zone: string
+  placeOfBaptism: string
 }
 
 export const registerUserEDC = async (reservation: IDataFormReservation) => {
@@ -15,11 +16,12 @@ export const registerUserEDC = async (reservation: IDataFormReservation) => {
 
   const reservationToSend = {
     date: dateLocal,
-    ci: reservation.ci,
     fullName: reservation.fullName,
-    email: reservation.email,
-    levelEDC: reservation.levelEDC,
-    phone: reservation.phone
+    ci: reservation.ci,
+    phone: reservation.phone,
+    dateBirth: reservation.dateBirth,
+    zone: reservation.zone,
+    placeOfBaptism: reservation.placeOfBaptism
   }
 
   console.log('saveUsersReservations => reservationToSend', reservationToSend)

@@ -5,15 +5,15 @@
 }
 
 .inputText::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  @apply text-sm text-black font-bold opacity-100 text-left;
+  @apply text-sm text-gray-500 font-normal opacity-100 text-left;
 }
 
 .inputText::-ms-input-placeholder { /* Microsoft Edge */
-  @apply text-sm text-black font-bold opacity-100 text-left;
+  @apply text-sm text-gray-500 font-normal opacity-100 text-left;
 }
 
 .inputText:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  @apply text-sm text-black font-bold opacity-100 text-left;
+  @apply text-sm text-gray-500 font-normal opacity-100 text-left;
 }
 
 /* Schedule Input - [Radio] */

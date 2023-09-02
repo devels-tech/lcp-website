@@ -27,6 +27,20 @@ export const rules = {
     }
   },
 
+  zone: {
+    required: { value: true, message: 'Campo Requerido' },
+    maxLength: { value: 100, message: 'Maximo 100 letras' },
+    minLength: { value: 3, message: 'Minimo 3 letras' }
+  },
+
+  dateBirth: {
+    required: { value: true, message: 'Campo Requerido' }
+  },
+
+  placeOfBaptism: {
+    required: { value: true, message: 'Campo Requerido' }
+  },
+
   levelEDC: {
     required: { value: true, message: 'Elija el nivel de la EDC' }
   }
