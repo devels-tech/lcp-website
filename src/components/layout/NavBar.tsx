@@ -12,8 +12,8 @@ export const Navbar = () => {
     leftItems: [
       { to: '/', label: 'Inicio' },
       { to: '/nosotros', label: 'Nosotros' },
-      { to: '/devocionales', label: 'Devocionales' },
-      { to: '/eventos/alabanza-casting', label: 'Audiciones' }
+      { to: '/devocionales', label: 'Devocionales' }
+      //  { to: '/eventos/alabanza-casting', label: 'Audiciones' }
     ],
     centerItem: <Logo />,
     rightItems: [
