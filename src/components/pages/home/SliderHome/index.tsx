@@ -1,24 +1,31 @@
-import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Pagination, Autoplay } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
+import { useMediaQuery } from '@/lib/hooks/useMediaQuery'
+import { handleFetchErrors } from '@/lib/utils/handleFetchErrors'
+import { getAllBanners } from '@/lib/services/banners'
 import { configSwiper } from './config'
 
 import { ButtonScroll } from '@/components/common/ButtonScroll'
+import { Banner } from './Items/Banner'
 import { DefaultItem } from './Items'
+
+import banner1 from 'public/img/banner/banner1.jpg'
+import banner2 from 'public/img/banner/banner2.jpg'
+import banner3 from 'public/img/banner/banner3.jpg'
+import banner4 from 'public/img/banner/banner4.jpg'
 
 import 'swiper/css/bundle'
 import 'swiper/css/pagination'
-import { useEffect, useState } from 'react'
-import { getAllBanners } from '@/lib/services/banners'
-import { handleFetchErrors } from '@/lib/utils/handleFetchErrors'
-import { Banner } from './Items/Banner'
-// import { LocalEvent2 } from './Items/LocalEvent'
 
 SwiperCore.use([Pagination, Autoplay])
 
 export const Slider = () => {
   const [banners, setBanners] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const isDesktop = useMediaQuery('(min-width: 960px)')
 
   useEffect(() => {
     (async () => {
@@ -40,13 +47,68 @@ export const Slider = () => {
       <div className='h-full'>
         <ButtonScroll />
 
-        <Swiper
-          {...configSwiper}
-          className='h-full'
-        >
+        <Swiper {...configSwiper} className='h-full'>
           <SwiperSlide>
             <DefaultItem />
           </SwiperSlide>
+
+          {
+            isDesktop && (
+              <>
+                <SwiperSlide>
+                  <div className='w-full hidden sm:block'>
+                    <Image
+                      src={banner1}
+                      alt='La Casa de mi Padre'
+                      placeholder='blur'
+                      className='w-full h-full object-cover'
+                      quality={100}
+                      priority
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className='w-full hidden sm:block'>
+                    <Image
+                      src={banner2}
+                      alt='La Casa de mi Padre'
+                      placeholder='blur'
+                      className='w-full h-full object-cover'
+                      quality={100}
+                      priority
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className='w-full hidden sm:block'>
+                    <Image
+                      src={banner3}
+                      alt='La Casa de mi Padre'
+                      placeholder='blur'
+                      className='w-full h-full object-cover'
+                      quality={100}
+                      priority
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className='w-full hidden sm:block'>
+                    <Image
+                      src={banner4}
+                      alt='La Casa de mi Padre'
+                      placeholder='blur'
+                      className='w-full h-full object-cover'
+                      quality={100}
+                      priority
+                    />
+                  </div>
+                </SwiperSlide>
+              </>
+            )
+          }
 
           {
             !isLoading
@@ -56,33 +118,8 @@ export const Slider = () => {
                 </SwiperSlide>
               )
               )
-
               : null
           }
-
-          {/* <SwiperSlide>
-            <LocalEvent2 />
-          </SwiperSlide> */}
-
-          {/* <SwiperSlide>
-            <LocalEvent />
-          </SwiperSlide> */}
-
-          {/* {
-            (topicOfTheMonth?.desktop?.length >= 1 || topicOfTheMonth?.mobile?.length >= 1) && (
-              <SwiperSlide>
-                <TopicOfTheMonth topicOfTheMonth={topicOfTheMonth} />
-              </SwiperSlide>
-            )
-          }
-
-          {
-            (events?.desktop?.length >= 1 || events?.mobile?.length >= 1) && (
-              <SwiperSlide>
-                <Events events={events} />
-              </SwiperSlide>
-            )
-          } */}
         </Swiper>
       </div>
     </section>

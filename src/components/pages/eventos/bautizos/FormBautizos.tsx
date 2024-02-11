@@ -41,7 +41,7 @@ export const FormBautizos = () => {
       <div className='text-center'>
         <span className='text-5xl font-black'>Guia Un Nuevo Comienzo</span>
         <br /><br />
-        <span className="text-3xl">Las clases comenzarán el domingo 6 de agosto en LCP</span>
+        <span className="text-3xl">Las clases comenzarán el domingo 3 de Marzo en LCP</span>
         <br /><br />
         <span className="text-3xl">Para más información contactar con Grismeda Ortiz (04142142517)</span>
         <br /><br />
