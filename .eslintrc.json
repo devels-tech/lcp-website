@@ -1,3 +1,27 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "standard"],
+  "overrides": [
+    {
+      "files": ["*.tsx"],
+      "rules": { "no-undef": "off" }
+    }
+  ],
+  "rules": {
+    "quotes": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "indent": ["warn", 2],
+    "no-unused-vars": "warn",
+    "no-multiple-empty-lines": "warn",
+    "eol-last": "warn",
+    "react/display-name": "off",
+    "@next/next/no-img-element": "off",
+    "space-before-blocks": "warn",
+    "semi":"warn",
+    "keyword-spacing": "warn",
+    "space-before-function-paren": "warn",
+    "comma-dangle": "warn",
+    "no-trailing-spaces": "warn",
+    "object-curly-spacing": "warn"
+  }
 }
