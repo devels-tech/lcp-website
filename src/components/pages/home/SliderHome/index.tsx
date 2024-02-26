@@ -12,8 +12,6 @@ import { ButtonScroll } from '@/components/common/ButtonScroll'
 import { Banner } from './Items/Banner'
 import { DefaultItem } from './Items'
 
-import banner1 from 'public/img/banner/banner1.jpg'
-import banner2 from 'public/img/banner/banner2.jpg'
 import banner3 from 'public/img/banner/banner3.jpg'
 import banner4 from 'public/img/banner/banner4.jpg'
 
@@ -55,32 +53,6 @@ export const Slider = () => {
           {
             isDesktop && (
               <>
-                <SwiperSlide>
-                  <div className='w-full hidden sm:block'>
-                    <Image
-                      src={banner1}
-                      alt='La Casa de mi Padre'
-                      placeholder='blur'
-                      className='w-full h-full object-cover'
-                      quality={100}
-                      priority
-                    />
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className='w-full hidden sm:block'>
-                    <Image
-                      src={banner2}
-                      alt='La Casa de mi Padre'
-                      placeholder='blur'
-                      className='w-full h-full object-cover'
-                      quality={100}
-                      priority
-                    />
-                  </div>
-                </SwiperSlide>
-
                 <SwiperSlide>
                   <div className='w-full hidden sm:block'>
                     <Image
