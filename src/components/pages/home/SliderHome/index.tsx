@@ -53,7 +53,7 @@ export const Slider = () => {
           {
             isDesktop && (
               <>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                   <div className='w-full hidden sm:block'>
                     <Image
                       src={banner3}
@@ -64,7 +64,7 @@ export const Slider = () => {
                       priority
                     />
                   </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
 
                 <SwiperSlide>
                   <div className='w-full hidden sm:block'>
