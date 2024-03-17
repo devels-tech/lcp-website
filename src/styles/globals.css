@@ -74,3 +74,51 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* RRSS Icons */
+
+.social__instagram {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.03125rem;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out 0s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.4rem;
+  gap: 0px;
+  min-height: 36px;
+  min-width: 36px;
+  color: rgb(255, 255, 255);
+  background: radial-gradient(circle at 28% 110%, rgb(253, 244, 151) 0%, rgb(253, 244, 151) 5%, rgb(253, 89, 73) 45%, rgb(214, 36, 159) 60%, rgb(40, 90, 235));
+}
+
+.social__youtube {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.03125rem;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out 0s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.4rem;
+  gap: 0px;
+  min-height: 36px;
+  min-width: 36px;
+  color: rgb(255, 255, 255);
+  background: #c4302b;
+}

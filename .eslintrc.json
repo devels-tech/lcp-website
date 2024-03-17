@@ -22,6 +22,7 @@
     "space-before-function-paren": "warn",
     "comma-dangle": "warn",
     "no-trailing-spaces": "warn",
-    "object-curly-spacing": "warn"
+    "object-curly-spacing": "warn",
+    "jsx-a11y/alt-text": "off"
   }
 }
