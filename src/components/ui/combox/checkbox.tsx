@@ -3,7 +3,6 @@ import { ComboxCheckBoxProps } from './types'
 
 import { CheckboxField } from './checkbox-field'
 
-
 export const ComboxCheckbox = ({ id, description, icon, placeholder, label, tabIndex, classNameContainer, readOnly, classNamePopover, disabled, ...rest }: ComboxCheckBoxProps) => {
   if (readOnly) {
     return (
@@ -35,7 +34,7 @@ export const ComboxCheckbox = ({ id, description, icon, placeholder, label, tabI
       placeholder={placeholder}
       tabIndex={tabIndex}
       disabled={disabled}
-        // @ts-ignore
+      // @ts-ignore
       form={rest?.form || null}
       // @ts-ignore
       items={rest?.items || []}

@@ -3,8 +3,8 @@
 import { UseFormReturn } from 'react-hook-form'
 import { type ReactNode, type HTMLAttributes, useMemo, useEffect } from 'react'
 
-import { FormControl, FormDescription, FormField, FormItem, FormLabel, Label, Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, Skeleton } from '..'
-import { cn } from '../../lib/utils'
+import { cn } from '@/lib/utils'
+import { FormControl, FormDescription, FormField, FormItem, FormLabel, Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, Skeleton } from '..'
 
 export interface IGenericSelectItems {
   label: string

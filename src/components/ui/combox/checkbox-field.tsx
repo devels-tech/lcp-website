@@ -3,9 +3,9 @@ import { UseFormReturn } from 'react-hook-form'
 import { Check } from 'lucide-react'
 
 import { ComboxItem, ComboxItemExtended } from './types'
-import { cn } from '../../lib/utils'
 
 import { FormDescription, FormField, FormItem, FormLabel, Badge, Button, Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator, Popover, PopoverContent, PopoverTrigger, TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from '../'
+import { cn } from '@/lib/utils'
 
 interface CheckBoxFieldProps {
   form: UseFormReturn<any, any, any>
@@ -27,7 +27,7 @@ export const CheckboxField = (props: CheckBoxFieldProps) => {
   const [itemsExtended, setItemsExtended] = useState<ComboxItemExtended[]>([])
   const [comboxWidth, setComboxWidth] = useState(null)
   const elementRef = useRef(null)
-  
+
   const defaultItems = form?.formState?.defaultValues[id]
 
   const formatItems = (item: ComboxItem): ComboxItemExtended => ({
@@ -35,6 +35,7 @@ export const CheckboxField = (props: CheckBoxFieldProps) => {
     selected: defaultItems ? defaultItems.includes(item.value) : false
   })
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const itemsFormatted: ComboxItemExtended[] = useMemo(() => items.map(formatItems), [defaultItems])
 
   const getSelectedItems = useMemo(() => {
@@ -44,7 +45,7 @@ export const CheckboxField = (props: CheckBoxFieldProps) => {
 
   const resetFilters = () =>
     setItemsExtended((prevState) =>
-      prevState.map((item) => ({...item, selected: false}))
+      prevState.map((item) => ({ ...item, selected: false }))
     )
 
   const selectItemFilter = (itemId: string, selected: boolean) => {
@@ -61,7 +62,7 @@ export const CheckboxField = (props: CheckBoxFieldProps) => {
     form.setValue(
       id,
       items.filter((item) => item.selected).map((item) => item.value),
-      {shouldDirty: true}
+      { shouldDirty: true }
     )
   }
 
@@ -196,9 +197,9 @@ export const CheckboxField = (props: CheckBoxFieldProps) => {
 
                     <CommandGroup>
                       {
-                        itemsExtended.map((item) => {
+                        itemsExtended.map((item, idx) => {
                           return (
-                            <TooltipProvider>
+                            <TooltipProvider key={idx}>
                               <Tooltip delayDuration={150}>
                                 <TooltipTrigger className='w-full'>
                                   <CommandItem

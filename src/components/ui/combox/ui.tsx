@@ -1,10 +1,8 @@
 import { RegisterOptions, UseFormReturn } from 'react-hook-form'
-import { ChevronsUpDown } from 'lucide-react'
+import { ChevronsUpDown, Check } from 'lucide-react'
 import { ReactNode, useState } from 'react'
-import { Check } from 'lucide-react'
 
-import { cn } from '../../lib/utils'
-
+import { cn } from '@/lib/utils'
 import { FormField, FormItem, Button, Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, Popover, PopoverContent, PopoverTrigger, FormLabel } from '..'
 
 type TComboxItem = {
@@ -32,7 +30,7 @@ interface IComboxProps {
   popoverClassName?: string
 }
 
-export function ComboBox({
+export function ComboBox ({
   id,
   form,
   label,

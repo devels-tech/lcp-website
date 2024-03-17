@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { Check } from 'lucide-react'
 
-import { cn } from '../../lib/utils'
-
 import { Label, Button, Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, Popover, PopoverContent, PopoverTrigger, Badge, CommandList } from '..'
+import { cn } from '@/lib/utils'
 
 export const ComboboxCheckboxReadOnly = ({ description, icon, placeholder, label, tabIndex, options, classNameContainer, classNamePopover, disabled }) => {
   const elementRef = useRef(null)
@@ -121,7 +120,7 @@ export const ComboboxCheckboxReadOnly = ({ description, icon, placeholder, label
                       >
                         <div
                           className={cn(
-                            'mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary bg-primary text-primary-foreground',
+                            'mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary bg-primary text-primary-foreground'
                             // option
                             //   ? 'bg-primary text-primary-foreground'
                             //   : 'opacity-50 [&_svg]:invisible'

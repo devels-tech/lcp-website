@@ -1,9 +1,7 @@
+import { Check, ChevronsUpDown } from 'lucide-react'
 import { UseFormReturn } from 'react-hook-form'
-import { IconCheck } from '@tabler/icons-react'
-import { ChevronsUpDown } from 'lucide-react'
 import { ReactNode, useState } from 'react'
-
-import { cn } from '../../lib/utils'
+import { cn } from '@/lib/utils'
 
 import { FormField, FormItem, Label, Button, Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, Popover, PopoverContent, PopoverTrigger, Skeleton } from '..'
 
@@ -30,7 +28,7 @@ interface IGenericComboxProps {
   isLoading?: boolean
 }
 
-export function GenericCombobox({
+export function GenericCombobox ({
   id,
   form,
   label,
@@ -113,7 +111,7 @@ export function GenericCombobox({
 
                         {item.label}
 
-                        <IconCheck
+                        <Check
                           className={cn(
                             'ml-auto h-4 w-4',
                             item.value === field.value

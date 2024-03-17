@@ -1,5 +1,5 @@
-import { ReactNode } from "react"
-import { UseFormReturn } from "react-hook-form"
+import { UseFormReturn } from 'react-hook-form'
+import { ReactNode } from 'react'
 
 export interface ComboxItem {
   id: string
@@ -11,7 +11,6 @@ export interface ComboxItem {
 export interface ComboxItemExtended extends ComboxItem {
   selected: boolean
 }
-
 
 export interface ComboxCheckBoxPropsBase {
   id: string
