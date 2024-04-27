@@ -12,8 +12,7 @@ import { ButtonScroll } from '@/components/common/ButtonScroll'
 import { Banner } from './Items/Banner'
 import { DefaultItem } from './Items'
 
-import banner3 from 'public/img/banner/banner3.jpg'
-import banner4 from 'public/img/banner/banner4.jpg'
+import banner4 from 'public/img/banner/abril.jpeg'
 
 import 'swiper/css/bundle'
 import 'swiper/css/pagination'
