@@ -5,9 +5,11 @@ import { Drawer } from '@/components/layout/Drawer'
 
 import { Logo } from '@/components/common/Logo'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export const Navbar = () => {
   const [showDrawer, setShowDrawer] = useState(false)
+  const router = useRouter()
   const { current: routes } = useRef({
     leftItems: [
       { to: '/', label: 'Inicio' },
@@ -21,6 +23,12 @@ export const Navbar = () => {
       { to: '/contactanos', label: 'Contáctanos' },
       { to: '/eventos', label: 'Eventos' }
     ]
+  })
+
+  console.log({
+    path: router.pathname,
+    routes: routes.rightItems[2].to,
+    active: router.pathname === routes.rightItems[2].to
   })
 
   return (
@@ -78,7 +86,9 @@ export const Navbar = () => {
                   } else {
                     return (
                       <li key={route.label} className='mx-5 3xl:mx-7'>
-                        <Link href={route.to} className='font-bold text-primary-500 select-none hover:text-secondary-500'>
+                        <Link href={route.to} className={
+                          `font-bold select-none hover:text-secondary-500 ${route.to === router.pathname ? 'text-secondary-500' : 'text-primary-500'}`
+                        }>
                           {route.label}
                         </Link>
                       </li>

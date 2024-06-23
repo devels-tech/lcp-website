@@ -51,11 +51,11 @@ export const WorshipSchedule = () => {
         }
       </div>
 
-      <br />
+      {/* <br /> */}
 
-      <Button onClick={() => router.push('/reservaciones')}>
+      {/* <Button onClick={() => router.push('/reservaciones')}>
         Reserva
-      </Button>
+      </Button> */}
     </section>
   )
 }

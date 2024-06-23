@@ -65,7 +65,7 @@ export const Slider = () => {
                   </div>
                 </SwiperSlide> */}
 
-                <SwiperSlide>
+                {/* <SwiperSlide>
                   <div className='w-full hidden sm:block'>
                     <Image
                       src={banner4}
@@ -76,7 +76,7 @@ export const Slider = () => {
                       priority
                     />
                   </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
               </>
             )
           }

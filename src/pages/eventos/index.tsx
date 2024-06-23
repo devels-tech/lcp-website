@@ -10,6 +10,7 @@ import { Event } from '@/components/pages/eventos/Event'
 // import audicionesSrc from 'public/img/local-events/audiciones.png'
 // import bautizosImgSrc from 'public/img/local-events/bautizoBg.webp'
 import edcImgSrc from 'public/img/local-events/edc.webp'
+import ebdvImgSrc from 'public/img/local-events/ebdv.jpeg'
 // import { Event } from '@/components/pages/eventos/Event'
 
 const { SEO } = PAGE_INFO
@@ -24,12 +25,21 @@ export const EventosPage: Page = () => {
         <meta name='description' content='Eventos de La Casa de mi Padre' />
       </Head>
 
-      <div className='h-screen-15 w-full'>
-        <div className='w-full h-full flex flex-col justify-center items-center pt-32'>
+      <div className='min-h-screen md:min-h-0 w-full pb-4 px-4'>
+        <div className='w-full h-full flex flex-col justify-center items-center pt-32 md:pt-32'>
           <span className='text-4xl md:text-7xl font-black text-gray-900'>Eventos</span>
           <br />
 
-          <ul className='flex flex-wrap justify-center items-center max-w-5xl gap-x-2'>
+          <ul className='flex flex-wrap justify-center items-center max-w-5xl gap-6'>
+            <li>
+              <Event
+                localImage={ebdvImgSrc}
+                title='Inscripciones EBDV'
+                redirectTo='https://forms.gle/3uwbrvjrWhHseT9h8'
+                redirectLabel='Inscripciones EBDV'
+              />
+            </li>
+
             <li>
               <Event
                 localImage={edcImgSrc}

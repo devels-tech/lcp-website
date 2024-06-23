@@ -17,8 +17,8 @@ interface IEventProps {
 
 export const Event = ({ imgSrc, localImage, title, description, redirectTo, redirectLabel, schedule, date }: IEventProps) => {
   return (
-    <div>
-      <article className='event_item'>
+    <div className='flex flex-col justify-center items-center'>
+      <article className='event_item aspect-square max-w-xs'>
         <div className={`event_content ${redirectTo ? 'cursor-default' : 'cursor-pointer'}`}>
           <Image
             src={imgSrc || localImage}
@@ -27,13 +27,13 @@ export const Event = ({ imgSrc, localImage, title, description, redirectTo, redi
             className='w-full h-full object-cover'
           />
 
-          {
+          {/* {
             (redirectTo && redirectLabel) && (
               <Link href={redirectTo}>
                 {redirectLabel}
               </Link>
             )
-          }
+          } */}
           {/* <div className='event_overlay'></div>
 
         <div className='event_content--text'>
@@ -55,7 +55,7 @@ export const Event = ({ imgSrc, localImage, title, description, redirectTo, redi
         </div>
       </article>
 
-      <Link href={redirectTo} className='w-full block py-2 border border-secondary-500 rounded-md text-center hover:bg-secondary-500 hover:text-white'>
+      <Link href={redirectTo} className='mt-3 w-full block py-2 border border-secondary-500 rounded-md text-center hover:bg-secondary-500 hover:text-white'>
         <span className='text-lg font-bold'>
           {redirectLabel}
         </span>
