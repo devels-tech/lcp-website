@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
-import headerHomeDefault from 'public/img/headerHomeDefault.webp'
-import headerHomeMobileDefault from 'public/img/headerHomeMobileDefault.webp'
+import headerHomeDefault from 'public/img/banner/default.jpeg'
 
 export const DefaultItem = () => (
   <div className='h-full'>
@@ -10,7 +9,7 @@ export const DefaultItem = () => (
         src={headerHomeDefault}
         alt='La Casa de mi Padre'
         placeholder='blur'
-        className='w-full h-full object-cover'
+        className='w-full h-full object-cover 2xl:-mt-36'
         quality={100}
         priority
       />
@@ -18,7 +17,7 @@ export const DefaultItem = () => (
 
     <div className='sm:hidden'>
       <Image
-        src={headerHomeMobileDefault}
+        src={headerHomeDefault}
         alt='La Casa de mi Padre'
         placeholder='blur'
         className='w-full h-full object-cover'

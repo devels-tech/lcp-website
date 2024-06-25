@@ -1,7 +1,7 @@
 import SwiperCore, { Pagination, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 import { useMediaQuery } from '@/lib/hooks/useMediaQuery'
 import { handleFetchErrors } from '@/lib/utils/handleFetchErrors'
@@ -12,7 +12,7 @@ import { ButtonScroll } from '@/components/common/ButtonScroll'
 import { Banner } from './Items/Banner'
 import { DefaultItem } from './Items'
 
-import banner4 from 'public/img/banner/abril.jpeg'
+// import banner4 from 'public/img/banner/abril.jpeg'
 
 import 'swiper/css/bundle'
 import 'swiper/css/pagination'
@@ -40,7 +40,7 @@ export const Slider = () => {
   }, [])
 
   return (
-    <section className='w-full relative mt-20 h-[calc(100vh-4rem)]'>
+    <section className='w-full relative mt-20 sm:mt-0'>
       <div className='h-full'>
         <ButtonScroll />
 
