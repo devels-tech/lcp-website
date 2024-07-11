@@ -1,16 +1,16 @@
-import { useRef } from 'react'
 import Image from 'next/image'
+import { useRef } from 'react'
+import Link from 'next/link'
 
 import { IconCancel } from '@/components/common/Icons'
 import LogoImg from 'public/img/logo.webp'
-import Link from 'next/link'
 
 export const Drawer = ({ isOpen, closeDrawer }: { isOpen: boolean, closeDrawer: () => void }) => {
   const { current: routesMobile } = useRef([
     { to: '/', label: 'Inicio' },
     { to: '/nosotros', label: 'Nosotros' },
     // { to: '/reservaciones', label: 'Reservaciones' },
-    { to: '/devocionales', label: 'Devocionales' },
+    { to: '/instituto', label: 'Instituto Bíblico' },
     { to: '/recursos/espiritu', label: 'Recursos' },
     { to: '/eventos', label: 'Eventos' },
     { to: '/contactanos', label: 'Contáctanos' },
@@ -36,7 +36,7 @@ export const Drawer = ({ isOpen, closeDrawer }: { isOpen: boolean, closeDrawer: 
           <ul className='text-center overflow-y-scroll h-screen-8 m-auto'>
             {
               routesMobile.map(route =>
-                <li key={route.label} className='mx-5 my-6 3xl:mx-7 font-extralight border border-solid border-secondary-500 rounded-2xl py-2 px-10 text-sm text-white'>
+                <li key={route.label} className='mx-5 my-6 3xl:mx-7 font-medium border border-solid border-secondary-500 rounded-2xl py-2 px-10 text-sm text-white'>
                   <Link href={route.to} onClick={closeDrawer}>
                     {route.label}
                   </Link>
