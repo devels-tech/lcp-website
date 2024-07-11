@@ -29,6 +29,6 @@ export const rules = {
 
 
   modality: {
-    required: { value: true, message: 'Nombre y Apellido obligatorio' },
+    required: { value: true, message: 'Modalidad obligatoria' },
   }
 }
