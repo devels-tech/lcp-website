@@ -41,7 +41,8 @@ export const rules = {
     required: { value: true, message: 'Campo Requerido' }
   },
 
-  levelEDC: {
+
+  level: {
     required: { value: true, message: 'Elija el nivel de la EDC' }
   }
 }

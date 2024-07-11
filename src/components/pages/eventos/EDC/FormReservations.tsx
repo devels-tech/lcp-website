@@ -5,10 +5,27 @@ import { registerUserEDC } from './registerUserEDC'
 import { rules } from './formConfig'
 
 import { Button } from '@/components/common/Button'
+import { handleOnlyNumbers } from '@/lib/utils/only-numbers'
+
+enum EdcLevel {
+  LEVEL_1 = 'Nivel 1',
+  LEVEL_2 = 'Nivel 2',
+  LEVEL_3 = 'Nivel 3',
+  LEVEL_4 = 'Nivel 4',
+}
+
+const edcLevel = {
+  [EdcLevel.LEVEL_1]: { label: 'Nivel 1', value: EdcLevel.LEVEL_1 },
+  [EdcLevel.LEVEL_2]: { label: 'Nivel 2', value: EdcLevel.LEVEL_2 },
+  [EdcLevel.LEVEL_3]: { label: 'Nivel 3', value: EdcLevel.LEVEL_3 },
+  [EdcLevel.LEVEL_4]: { label: 'Nivel 4', value: EdcLevel.LEVEL_4 },
+}
 
 interface IDataFormReservation {
   fullName: string
   ci: string
+  level: string
+  email: string
   phone: string
   dateBirth: string
   zone: string
@@ -16,7 +33,7 @@ interface IDataFormReservation {
 }
 
 export const FormEDCReservations = () => {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<IDataFormReservation>()
+  const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm<IDataFormReservation>()
 
   const onSubmit = async (data: IDataFormReservation) => {
     const { data: resData } = await registerUserEDC(data)
@@ -36,6 +53,30 @@ export const FormEDCReservations = () => {
       <br /><br />
 
       <div className='text-left'>
+        <div>
+          <label
+            className='font-bold text-sm'
+            htmlFor='fullName'
+          >
+            Nivel
+          </label>
+          {errors.level && <p className='text-red-600'>{errors.level.message}</p> }
+
+          <select
+            id='level'
+            name='level'
+            tabIndex={1}
+            placeholder='Nivel'
+            defaultValue={EdcLevel.LEVEL_1}
+            {...register('level', rules.level)}
+            className='relative w-full px-3 py-1.5 my-2 bg-[rgba(255,255,255,.13)] rounded-2xl border border-solid border-black outline-none appearance-none leading-8'
+          >
+            <option className='text-black' value={edcLevel[EdcLevel.LEVEL_1].value}>{edcLevel[EdcLevel.LEVEL_1].label}</option>
+            <option className='text-black' value={edcLevel[EdcLevel.LEVEL_2].value}>{edcLevel[EdcLevel.LEVEL_2].label}</option>
+            <option className='text-black' value={edcLevel[EdcLevel.LEVEL_3].value}>{edcLevel[EdcLevel.LEVEL_3].label}</option>
+            <option className='text-black' value={edcLevel[EdcLevel.LEVEL_4].value}>{edcLevel[EdcLevel.LEVEL_4].label}</option>
+          </select>
+        </div>
 
         <div>
           <label
@@ -50,12 +91,12 @@ export const FormEDCReservations = () => {
             className='inputText'
             aria-label='fullName'
             name='fullName'
-            {...register('fullName', rules.fullName)}
             type='text'
             autoCapitalize='word'
             autoComplete='on'
-            tabIndex={1}
+            tabIndex={2}
             placeholder='Nombre y Apellido'
+            {...register('fullName', rules.fullName)}
           />
         </div>
 
@@ -76,10 +117,37 @@ export const FormEDCReservations = () => {
             maxLength={10}
             minLength={7}
             type='text'
-            tabIndex={2}
+            onKeyPress={handleOnlyNumbers}
+            tabIndex={3}
             placeholder='00.000.000'
           />
         </div>
+
+        <div>
+          <label
+            className='font-bold text-sm'
+            htmlFor='email'
+          >
+            Correo Electrónico
+          </label>
+          {errors.email && <p className='text-red-600'>{errors.email.message}</p> }
+
+          <input
+          className='inputText'
+          aria-label='Correo Electrónico'
+          name='email'
+          {...register('email', rules.email)}
+          type='email'
+          autoCapitalize='none'
+          autoComplete='off'
+          autoCorrect='off'
+          spellCheck='false'
+          tabIndex={4}
+          placeholder='Correo Electrónico'
+          aria-autocomplete='list'
+        />
+        </div>
+
 
         <div>
           <label
@@ -95,8 +163,10 @@ export const FormEDCReservations = () => {
             aria-label="Teléfono"
             name="phone"
             {...register('phone', rules.phone)}
+            onKeyPress={handleOnlyNumbers}
             type="tel"
-            tabIndex={2}
+            maxLength={11}
+            tabIndex={5}
             placeholder="0412000000"
           />
         </div>
@@ -118,7 +188,7 @@ export const FormEDCReservations = () => {
             type='text'
             autoCapitalize='word'
             autoComplete='on'
-            tabIndex={3}
+            tabIndex={6}
             placeholder='Catia / El Hatillo / etc...'
           />
         </div>
@@ -137,7 +207,7 @@ export const FormEDCReservations = () => {
             name='placeOfBaptism'
             {...register('placeOfBaptism', rules.placeOfBaptism)}
             className='inputText'
-            tabIndex={4}
+            tabIndex={7}
             placeholder='LCP/Otro'
           />
         </div>
@@ -158,12 +228,12 @@ export const FormEDCReservations = () => {
             max='2018-12-31'
             {...register('dateBirth', rules.dateBirth)}
             className='inputText'
-            tabIndex={5}
+            tabIndex={8}
           />
         </div>
       </div>
 
-      <Button classes='py-1 mt-4' tabIndex={6} type='submit'>
+      <Button classes='py-1 mt-4' tabIndex={9} type='submit'>
         Registrar
       </Button>
     </form>

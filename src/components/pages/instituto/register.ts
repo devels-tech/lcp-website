@@ -1,19 +1,17 @@
 import { addDoc } from 'firebase/firestore'
-import { EDC_DB_REF } from '@/lib/services/firebase/utils/refs'
+
+import { INSTITUTE_DB_REF } from '@/lib/services/firebase/utils/refs'
 import { getNormalizeLocalDate } from '@/lib/utils/getLocalDate'
 
-interface IDataFormReservation {
+interface IntituteBibleData {
   fullName: string
   ci: string
   phone: string
   email: string
-  level: string
-  dateBirth: string
-  zone: string
-  placeOfBaptism: string
+  modality: string
 }
 
-export const registerUserEDC = async (reservation: IDataFormReservation) => {
+export const registerInstituteBible = async (reservation: IntituteBibleData) => {
   const dateLocal = getNormalizeLocalDate()
 
   const reservationToSend = {
@@ -21,16 +19,13 @@ export const registerUserEDC = async (reservation: IDataFormReservation) => {
     fullName: reservation.fullName,
     ci: reservation.ci,
     email: reservation.email,
-    level: reservation.level,
+    modality: reservation.modality,
     phone: reservation.phone,
-    dateBirth: reservation.dateBirth,
-    zone: reservation.zone,
-    placeOfBaptism: reservation.placeOfBaptism
   }
 
-  console.log('saveUsersReservations => reservationToSend', reservationToSend)
+  console.log('registerInstituteBible', reservationToSend)
 
-  const resSaveReservation = await addDoc(EDC_DB_REF, reservationToSend)
+  const resSaveReservation = await addDoc(INSTITUTE_DB_REF, reservationToSend)
     .then((docRef) => ({
       data: `Reservación ${docRef.id} registrada con exito`,
       error: null
