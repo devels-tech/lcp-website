@@ -25,7 +25,7 @@ export const IntituteBibleFrom = () => {
       toast('¡Hubo un error!', { type: 'error' })
     }
 
-    toast('¡Inscripccion Exitosa!', { type: 'success' })
+    toast('¡Inscripción Exitosa!', { type: 'success' })
     reset()
 
     router.push('/')
@@ -34,10 +34,9 @@ export const IntituteBibleFrom = () => {
   return (
     <form onSubmit={onSubmit} className='w-full lg:w-1/2 mt-4 lg:sticky top-0 left-0 pt-20'>
       <h6 className='font-bold text-xl lg:hidden'>Instituto Bíblico - Inscripciones</h6>
-      <h6 className='font-bold text-xl hidden lg:inline-block '>Formulario</h6>
-
+      <h6 className='font-bold text-xl hidden lg:inline-block '>Formulario de inscripción</h6>
       
-      <div>
+      <div className='mt-2'>
         <label
           className='font-bold text-sm'
           htmlFor='fullName'

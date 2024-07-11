@@ -42,7 +42,7 @@ export const FormEDCReservations = () => {
       toast('¡Hubo un error!', { type: 'error' })
     }
 
-    toast('¡Inscripccion Exitosa!', { type: 'success' })
+    toast('¡Inscripción Exitosa!', { type: 'success' })
     reset()
   }
 
