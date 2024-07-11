@@ -35,7 +35,11 @@ export const IntituteBibleFrom = () => {
     <form onSubmit={onSubmit} className='w-full lg:w-1/2 mt-4 lg:sticky top-0 left-0 pt-20'>
       <h6 className='font-bold text-xl lg:hidden'>Instituto Bíblico - Inscripciones</h6>
       <h6 className='font-bold text-xl hidden lg:inline-block '>Formulario de inscripción</h6>
-      
+
+      <br />
+
+      <p className='text-sm'>Costo de la matrícula: <span className='font-medium'>5 $  taza BCV</span></p>
+
       <div className='mt-2'>
         <label
           className='font-bold text-sm'
@@ -130,7 +134,7 @@ export const IntituteBibleFrom = () => {
         />
       </div>
 
-      <div className='mt-1 mb-4'>
+      <div className='mt-1'>
         <label
           className='font-bold text-sm'
           htmlFor='modality'
@@ -154,7 +158,21 @@ export const IntituteBibleFrom = () => {
         </select>
       </div>
 
-      <Button classes='w-full' type='submit'>
+      <div className='mt-2'>
+        <span className='font-bold text-sm'>Adjunto del pago de la matrícula</span>
+
+        <label className='block mt-2'>
+          <input type='file' className='block w-full text-sm text-slate-500
+            file:mr-4 file:py-2 file:px-4
+            file:rounded-full file:border-0
+            file:text-sm file:font-semibold
+            file:bg-violet-50 file:text-violet-700
+            hover:file:bg-violet-100
+          '/>
+        </label>
+      </div>
+
+      <Button classes='w-full mt-4' type='submit'>
         Enviar
       </Button>
     </form>
