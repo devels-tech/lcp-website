@@ -24,7 +24,7 @@ export const Button = ({
     tabIndex={tabIndex}
     type={type}
     className={
-      `bg-secondary-500 filter hover:brightness-125 focus:brightness-125 text-white py-1 px-10 rounded-3xl min-w-176px font-bold xl:text-lg 4xl:text-xl xl:px-11 disabled:opacity-50 disabled:cursor-not-allowed ${classes}`
+      `bg-secondary-500 filter hover:brightness-125 focus:brightness-125 text-white py-1 px-10 rounded-3xl min-w-176px font-bold xl:text-lg 4xl:text-xl xl:px-11 disabled:bg-zinc-400 disabled:cursor-not-allowed ${classes}`
     }
     onClick={onClick}
     style={style}

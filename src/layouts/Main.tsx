@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/Footer'
 const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <main className='w-full relative min-h-screen'>
+      <main className='w-full relative min-h-screen bg-zinc-50'>
         <Navbar />
         {children}
       </main>
