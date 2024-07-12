@@ -25,12 +25,6 @@ export const Navbar = () => {
     ]
   })
 
-  console.log({
-    path: router.pathname,
-    routes: routes.rightItems[2].to,
-    active: router.pathname === routes.rightItems[2].to
-  })
-
   return (
     <>
       <header className='w-full h-16 lg:h-20 z-50 fixed top-0 bg-transparent'>

@@ -1,7 +1,7 @@
 import { initializeApp, FirebaseApp, getApps } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
-import { getStorage } from 'firebase/storage'
+import { getStorage, ref } from 'firebase/storage'
 
 import { PAGE_INFO } from '@/config'
 export { uploadBytes, uploadString, getDownloadURL, uploadBytesResumable, deleteObject, listAll } from 'firebase/storage'
