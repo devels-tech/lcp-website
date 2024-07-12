@@ -27,8 +27,7 @@ export const rules = {
     pattern: { value: /^[0-9]*$/i, message: 'Solo Numeros' }
   },
 
-
   modality: {
-    required: { value: true, message: 'Modalidad obligatoria' },
+    required: { value: true, message: 'Modalidad obligatoria' }
   }
 }

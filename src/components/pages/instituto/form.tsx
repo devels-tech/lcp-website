@@ -65,7 +65,7 @@ export const IntituteBibleFrom = () => {
       {
         loading && <Loading />
       }
-    
+
       <form onSubmit={onSubmit} className='w-full lg:w-1/2 mt-4 lg:sticky top-0 left-0 pt-24 lg:pt-28'>
         <div className='w-full h-full p-6 bg-white rounded-xl'>
           <h6 className='font-bold text-xl lg:hidden'>Instituto Bíblico - Inscripciones</h6>
@@ -109,29 +109,29 @@ export const IntituteBibleFrom = () => {
 
             {errors.ci && <p className='text-red-600 text-sm'>{errors.ci.message}</p>}
 
-              <input
-                className='inputText mt-2'
-                aria-label='ci'
-                name='ci'
-                {...register('ci', rules.ci)}
-                maxLength={9}
-                disabled={loading}
-                minLength={7}
-                type='text'
-                onKeyPress={handleOnlyNumbers}
-                tabIndex={3}
-                placeholder='00.000.000'
-              />
-            </div>
+            <input
+              className='inputText mt-2'
+              aria-label='ci'
+              name='ci'
+              {...register('ci', rules.ci)}
+              maxLength={9}
+              disabled={loading}
+              minLength={7}
+              type='text'
+              onKeyPress={handleOnlyNumbers}
+              tabIndex={3}
+              placeholder='00.000.000'
+            />
+          </div>
 
-            <div>
-              <label
-                className='font-bold text-sm'
-                htmlFor='email'
-              >
+          <div>
+            <label
+              className='font-bold text-sm'
+              htmlFor='email'
+            >
                 Correo Electrónico
-              </label>
-              {errors.email && <p className='text-red-600 text-sm'>{errors.email.message}</p> }
+            </label>
+            {errors.email && <p className='text-red-600 text-sm'>{errors.email.message}</p> }
 
             <input
               className='inputText'
@@ -150,7 +150,6 @@ export const IntituteBibleFrom = () => {
               aria-autocomplete='list'
             />
           </div>
-
 
           <div>
             <label
@@ -227,7 +226,7 @@ export const IntituteBibleFrom = () => {
           <Button classes='w-full mt-4' type='submit' tabIndex={8} disabled={loading}>
             Enviar
           </Button>
-      </div>
+        </div>
       </form>
     </>
   )

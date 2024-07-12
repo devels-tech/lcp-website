@@ -18,7 +18,7 @@ const edcLevel = {
   [EdcLevel.LEVEL_1]: { label: 'Nivel 1', value: EdcLevel.LEVEL_1 },
   [EdcLevel.LEVEL_2]: { label: 'Nivel 2', value: EdcLevel.LEVEL_2 },
   [EdcLevel.LEVEL_3]: { label: 'Nivel 3', value: EdcLevel.LEVEL_3 },
-  [EdcLevel.LEVEL_4]: { label: 'Nivel 4', value: EdcLevel.LEVEL_4 },
+  [EdcLevel.LEVEL_4]: { label: 'Nivel 4', value: EdcLevel.LEVEL_4 }
 }
 
 interface IDataFormReservation {
@@ -133,21 +133,20 @@ export const FormEDCReservations = () => {
           {errors.email && <p className='text-red-600'>{errors.email.message}</p> }
 
           <input
-          className='inputText'
-          aria-label='Correo Electrónico'
-          name='email'
-          {...register('email', rules.email)}
-          type='email'
-          autoCapitalize='none'
-          autoComplete='off'
-          autoCorrect='off'
-          spellCheck='false'
-          tabIndex={4}
-          placeholder='Correo Electrónico'
-          aria-autocomplete='list'
-        />
+            className='inputText'
+            aria-label='Correo Electrónico'
+            name='email'
+            {...register('email', rules.email)}
+            type='email'
+            autoCapitalize='none'
+            autoComplete='off'
+            autoCorrect='off'
+            spellCheck='false'
+            tabIndex={4}
+            placeholder='Correo Electrónico'
+            aria-autocomplete='list'
+          />
         </div>
-
 
         <div>
           <label

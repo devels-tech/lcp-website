@@ -34,6 +34,7 @@
         "react/display-name": "off",
         "@next/next/no-img-element": "off",
         "space-before-blocks": "warn",
+         "no-useless-escape": "warn",
         "semi":"warn",
         "keyword-spacing": "warn",
         "no-trailing-spaces": "warn"

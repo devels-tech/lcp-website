@@ -14,14 +14,14 @@ export const Navbar = () => {
     leftItems: [
       { to: '/', label: 'Inicio' },
       { to: '/nosotros', label: 'Nosotros' },
-      { to: '/contactanos', label: 'Contáctanos' },
+      { to: '/contactanos', label: 'Contáctanos' }
       //  { to: '/eventos/alabanza-casting', label: 'Audiciones' }
     ],
     centerItem: <Logo />,
     rightItems: [
       { to: '/recursos/espiritu', label: 'Recursos' },
       { to: '/eventos', label: 'Eventos' },
-      { to: '/instituto', label: 'Instituto' },
+      { to: '/instituto', label: 'Instituto' }
     ]
   })
 
