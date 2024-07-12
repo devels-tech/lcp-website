@@ -66,7 +66,7 @@ export const IntituteBibleFrom = () => {
         loading && <Loading />
       }
     
-      <form onSubmit={onSubmit} className='w-full lg:w-1/2 mt-4 lg:sticky top-0 left-0 pt-20'>
+      <form onSubmit={onSubmit} className='w-full lg:w-1/2 mt-4 lg:sticky top-0 left-0 pt-24 lg:pt-28'>
         <div className='w-full h-full p-6 bg-white rounded-xl'>
           <h6 className='font-bold text-xl lg:hidden'>Instituto Bíblico - Inscripciones</h6>
           <h6 className='font-bold text-xl hidden lg:inline-block '>Formulario de inscripción</h6>

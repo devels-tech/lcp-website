@@ -1,6 +1,6 @@
 export const IntituteBibleInfo = () => {
   return (
-    <div className='w-full h-full lg:pt-20'>
+    <div className='w-full h-full lg:pt-28'>
       <section>
         <h4 className='font-bold text-2xl mt-4 lg:hidden'>Contenido</h4>
         <h4 className='font-bold text-2xl mt-4 hidden lg:inline-block'>Instituto Bíblico</h4>
