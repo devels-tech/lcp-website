@@ -30,10 +30,10 @@ export const IntituteBibleInfo = () => {
         <h6 className='font-bold'>Objetivos</h6>
 
         <ul className='mt-1'>
-          <li>1. Desarrollar recursos educativos para la Iglesia de nuestro país.</li>
-          <li>2. Crear lugares en el Internet para la educación a distancia.</li>
-          <li>3. Formar un grupo de lideres en un periodo de dos (2) años.</li>
-          <li>4. Establecer un modelo que pueda ser replicado en otras partes del territorio nacional.</li>
+          <li><span className='font-bold'>1.</span> Desarrollar recursos educativos para la Iglesia de nuestro país.</li>
+          <li><span className='font-bold'>2.</span> Crear lugares en el Internet para la educación a distancia.</li>
+          <li><span className='font-bold'>3.</span> Formar un grupo de lideres en un periodo de dos (2) años.</li>
+          <li><span className='font-bold'>4.</span> Establecer un modelo que pueda ser replicado en otras partes del territorio nacional.</li>
         </ul>
       </section>
 
@@ -53,7 +53,7 @@ export const IntituteBibleInfo = () => {
       <section className='mt-4'>
         <h6 className='font-bold'>Modalidades</h6>
 
-        <p className='mt-1'>Los cursos podrán ofrecerse en dos modalidades, presencial y online.</p>
+        <p className='mt-1'>Los cursos se ofrecerán en dos modalidades: Presencial y Online</p>
 
         <ul className='mt-2'>
           <li>1. Siete sesiones semanales de 2 horas.</li>
@@ -61,7 +61,7 @@ export const IntituteBibleInfo = () => {
       </section>
 
       <section className='mt-4'>
-        <h6 className='font-bold'>Currículo</h6>
+        <h6 className='font-bold'>Currículum</h6>
 
         <p className='mt-1'>Los cursos para este programa son los siguientes:</p>
 
@@ -86,11 +86,11 @@ export const IntituteBibleInfo = () => {
         <span className='font-bold'>II. CICLO DE TEOLOGÍA.</span>
 
         <p className='mt-2'>
-          - <span className='font-bold'>Introducción a la Teología I.</span> Definición de los conceptos básicos de la teología sistemática.
+          - <span className='font-bold'>Teología I (Introducción).</span> Definición de los conceptos básicos de la teología sistemática.
         </p> <br className='lg:hidden' />
 
         <p>
-          - <span className='font-bold'>Estudio Teológicos II.</span> Explorar los temas teológicos fundamentales.
+          - <span className='font-bold'>Teología II.</span> Explorar los temas teológicos fundamentales.
         </p>
 
         <br />
@@ -98,11 +98,11 @@ export const IntituteBibleInfo = () => {
         <span className='font-bold'>III. CICLO DE HISTORIA.</span>
 
         <p className='mt-2'>
-          - <span className='font-bold'>Historia de la Iglesia 1:</span> Panorama de la Iglesia Antigua hasta la Reforma Protestante.
+          - <span className='font-bold'>Historia de la Iglesia I:</span> Panorama de la Iglesia Antigua hasta la Reforma Protestante.
         </p> <br className='lg:hidden' />
 
         <p>
-          - <span className='font-bold'>Historia de la Iglesia 2:</span> Explorar los temas teológicos fundamentales.
+          - <span className='font-bold'>Historia de la Iglesia II:</span> Explorar los temas teológicos fundamentales.
         </p>
 
         <br />
@@ -130,7 +130,7 @@ export const IntituteBibleInfo = () => {
         <span className='font-bold'>V. CICLO ESCATÓLOGICO.</span>
 
         <p className='mt-2'>
-          - <span className='font-bold'>Escatología 1 y 2.</span>. Un acercamiento a los eventos del futuro contemplados en el libro de Daniel y Apocalipsis.
+          - <span className='font-bold'>Escatología I y II.</span>. Un acercamiento a los eventos del futuro contemplados en los libros de Daniel y Apocalipsis.
         </p>
       </section>
     </div>

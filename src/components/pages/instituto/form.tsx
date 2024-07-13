@@ -130,7 +130,7 @@ export const IntituteBibleFrom = () => {
         </div>
 
         <div className='w-full h-full p-6 bg-white rounded-xl mt-4'>
-          <span className='font-bold text-base'>Horarios</span>
+          <span className='font-bold text-base'>Modalidades</span>
           <p className='text-sm mt-1 lg:mt-0'>
             <span className='font-bold'>Presencial: </span> <br className='lg:hidden' /> Sábados de 9:00 am a 11:00 am
           </p>
