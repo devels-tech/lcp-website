@@ -132,7 +132,7 @@ export const IntituteBibleFrom = () => {
         <div className='w-full h-full p-6 bg-white rounded-xl mt-4'>
           <span className='font-bold text-base'>Horarios</span>
           <p className='text-sm mt-1 lg:mt-0'>
-            <span className='font-bold'>Presencial: </span> <br className='lg:hidden' /> Sabados de 9:00 am a 11:00 am
+            <span className='font-bold'>Presencial: </span> <br className='lg:hidden' /> Sábados de 9:00 am a 11:00 am
           </p>
 
           <p className='text-sm mt-1 lg:mt-0'>
@@ -263,7 +263,7 @@ export const IntituteBibleFrom = () => {
                   name='modality'
                   type='radio'
                   value='Presencial'
-                /> Presencial <span className='text-xs font-bold'>{ modalityWatch === 'Presencial' && '(Sabados de 9:00 am a 11:00 am)' }</span>
+                /> Presencial <span className='text-xs font-bold'>{ modalityWatch === 'Presencial' && '(Sábados de 9:00 am a 11:00 am)' }</span>
               </label>
 
               <label>
