@@ -43,7 +43,7 @@ export const IntituteBibleInfo = () => {
         <p className='mt-1'>
           Este Instituto ofrecerá un Diploma en Estudios Ministeriales que requerirá la aprobación de los doce (12) cursos que ofrecemos.<br /><br />
 
-          Cada curso será de veinticuatro (14) horas contacto con el personal docente, esperando que cada estudiante complete cuarenta y ocho (14) horas adicionales de estudio Individual.<br /><br />
+          Cada curso será de veinticuatro (24) horas contacto con el personal docente, esperando que cada estudiante complete cuarenta y ocho (48) horas adicionales de estudio Individual.<br /><br />
           Estas horas adicionales, podrán obtenerse por medio de la lectura personal, así como de la interacción en lugares de Internet diseñados para este programa.<br /><br />
 
           El estudiante tendrá que asistir un mínimo de catorce (14) horas de cada curso y completar dos (2) tareas y un examen.
@@ -131,14 +131,6 @@ export const IntituteBibleInfo = () => {
 
         <p className='mt-2'>
           - <span className='font-bold'>Escatología 1 y 2.</span>. Un acercamiento a los eventos del futuro contemplados en el libro de Daniel y Apocalipsis.
-        </p>
-      </section>
-
-      <section className='mt-4'>
-        <h6 className='font-bold'>SEDE</h6>
-
-        <p className='mt-1'>
-          Los cursos serán ofrecidos en la Iglesia <span className='font-bold'>&quot;La Casa de mi Padre&quot;.</span>
         </p>
       </section>
     </div>

@@ -23,7 +23,7 @@ const Loading = () => {
     <div className='w-screen h-screen bg-zinc-800/50 fixed top-0 left-0 flex flex-col justify-center items-center z-50'>
       <div className='max-w-md w-full bg-white rounded-md p-4 flex flex-col justify-center items-center'>
         <svg className='text-primary-400 animate-spin h-20 w-20 text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'>
-          <circle className='opacity-25' cx='12' cy='12' r='10" stroke="currentColor' strokeWidth='4'></circle>
+          <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4'></circle>
           <path className='opacity-75' fill='currentColor' d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'></path>
         </svg>
 
@@ -37,11 +37,15 @@ const Loading = () => {
 }
 
 export const IntituteBibleFrom = () => {
-  const { handleSubmit, register, formState: { errors }, reset, watch } = useForm<IntituteBibleData>()
+  const { handleSubmit, register, formState: { errors }, reset, watch } = useForm<IntituteBibleData>({ 
+    defaultValues: { modality: 'Presencial' }
+  })
+
   const [loading, setLoading] = useState(false)
   const router = useRouter()
 
   const fileWatch = watch('file')
+  const modalityWatch = watch('modality')
 
   const onSubmit = handleSubmit(async (data: IntituteBibleData) => {
     setLoading(true)
@@ -66,16 +70,37 @@ export const IntituteBibleFrom = () => {
         loading && <Loading />
       }
 
-      <form onSubmit={onSubmit} className='w-full lg:w-1/2 mt-4 lg:sticky top-0 left-0 pt-24 lg:pt-28'>
+      <form onSubmit={onSubmit} className='w-full lg:w-1/2 mt-4 lg:sticky top-0 left-0 pt-24 lg:pt-24'>
         <div className='w-full h-full p-6 bg-white rounded-xl'>
+          <span className='font-bold text-base'>Requisitos:</span>
+          <p className='text-sm'>
+            <span className='font-bold'>1.</span> Haber concluido los 4 niveles de la EDC
+          </p>
+
+          <p className='text-sm'>
+            <span className='font-bold'>2.</span> Haber realizado el pago de la matrícula: <span className='font-bold'>$5 taza BCV</span>
+          </p>
+
+          {/* <span className='font-bold text-base inline-block mt-2'>Horarios:</span>
+
+          <p className='text-sm'>
+            <span className='font-bold'>Presencial: </span> Sabados de 9:00 am a 11:00 am
+          </p>
+
+          <p className='text-sm'>
+            <span className='font-bold'>Online: </span>Jueves de 7:30 pm a 9:00 pm
+          </p> */}
+        </div>
+
+        <div className='w-full h-full p-6 bg-white rounded-xl mt-4'>
           <h6 className='font-bold text-xl lg:hidden'>Instituto Bíblico - Inscripciones</h6>
           <h6 className='font-bold text-xl hidden lg:inline-block '>Formulario de inscripción</h6>
 
-          <br />
+          <p className='text-xs'>
+            Los cursos serán ofrecidos en la Iglesia <span className='font-bold'>La Casa de mi Padre</span>
+          </p>  
 
-          <p className='text-sm'>Costo de la matrícula: <span className='font-medium'>5 $  taza BCV</span></p>
-
-          <div className='mt-2'>
+          <div className='mt-1'>
             <label
               className='font-bold text-sm'
               htmlFor='fullName'
@@ -180,23 +205,31 @@ export const IntituteBibleFrom = () => {
               htmlFor='modality'
             >
               Modalidad
-            </label>
+            </label> <br />
+
+            <div className='flex flex-col w-full'>
+              <label>
+                <input
+                  {...register('modality', rules.modality)}
+                  className='accent-primary-400'
+                  name='modality'
+                  type='radio'
+                  value='Presencial'
+                /> Presencial <span className='text-xs font-bold'>{ modalityWatch === 'Presencial' && '(Sabados de 9:00 am a 11:00 am)' }</span>
+              </label>
+
+              <label>
+                <input
+                  {...register('modality', rules.modality)}
+                  className='accent-primary-400'
+                  name='modality'
+                  type='radio'
+                  value='Online'
+                /> Online <span className='text-xs font-bold'>{ modalityWatch === 'Online' && '(Jueves de 7:30 pm a 9:00 pm)' }</span>
+              </label>
+            </div>
 
             {errors.modality && <p className='text-sm text-red-600'>{errors.modality.message}</p>}
-
-            <select
-              id='modality'
-              name='modality'
-              disabled={loading}
-              tabIndex={6}
-              className='relative w-full px-3 py-1.5 my-2 bg-[rgba(255,255,255,.13)] rounded-2xl border border-solid border-black outline-none appearance-none leading-8'
-              defaultValue='Presencial'
-              placeholder='Online'
-              {...register('modality', rules.modality)}
-            >
-              <option className='text-black' value='Presencial'>Presencial</option>
-              <option className='text-black' value='Online'>Online</option>
-            </select>
           </div>
 
           <div className='mt-2'>
