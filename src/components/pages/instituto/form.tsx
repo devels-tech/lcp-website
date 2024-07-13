@@ -36,16 +36,53 @@ const Loading = () => {
   )
 }
 
+
+const BancaryData = ({ close }) => {
+  return (
+    <div className='w-screen h-screen bg-zinc-800/50 fixed top-0 left-0 flex flex-col justify-center items-center z-50'>
+      <div className='max-w-xs w-full bg-white rounded-md p-4 flex flex-col justify-center items-center'>
+        <div className='pt-2 text-center'>
+          <div className='w-full text-left text-sm'>
+          <span className='font-bold text-2xl'>Datos Bancarios</span> <br />
+            <span className='font-bold'>Transferencia</span>
+          </div>
+          
+          <div className='text-left mt-4'>
+            <p>Banesco Cta. Cte.</p>
+            <p>0134-0366-0136-6129-0259</p>
+            <p>La Casa de mi Padre</p>
+            <p>Rif. J-29453414-7</p>
+          </div>
+        </div>
+
+        <div className='w-full flex justify-end items-end'>
+          <button
+            className='bg-primary-500 text-white text-xs rounded-full px-10 py-2 mt-2 w-fit font-bold'
+            onClick={close}
+            type='button'
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export const IntituteBibleFrom = () => {
   const { handleSubmit, register, formState: { errors }, reset, watch } = useForm<IntituteBibleData>({ 
     defaultValues: { modality: 'Presencial' }
   })
 
+  const [showBancaryData, setShowBancaryData] = useState(false)
   const [loading, setLoading] = useState(false)
   const router = useRouter()
 
-  const fileWatch = watch('file')
   const modalityWatch = watch('modality')
+  const fileWatch = watch('file')
+
+  const handleOpenBancaryData = () => setShowBancaryData(true)
+  const handleCloseBancaryData = () => setShowBancaryData(false)
 
   const onSubmit = handleSubmit(async (data: IntituteBibleData) => {
     setLoading(true)
@@ -70,26 +107,37 @@ export const IntituteBibleFrom = () => {
         loading && <Loading />
       }
 
-      <form onSubmit={onSubmit} className='w-full lg:w-1/2 mt-4 lg:sticky top-0 left-0 pt-24 lg:pt-24'>
+      { !loading && showBancaryData && <BancaryData close={handleCloseBancaryData} /> }
+
+      <form onSubmit={onSubmit} className='w-full lg:w-1/2 mt-4  top-0 left-0 pt-24 lg:pt-24'>
         <div className='w-full h-full p-6 bg-white rounded-xl'>
-          <span className='font-bold text-base'>Requisitos:</span>
-          <p className='text-sm'>
+          <span className='font-bold text-base'>Requisitos</span>
+          <p className='text-sm mt-1 lg:mt-0'>
             <span className='font-bold'>1.</span> Haber concluido los 4 niveles de la EDC
           </p>
 
-          <p className='text-sm'>
-            <span className='font-bold'>2.</span> Haber realizado el pago de la matrícula: <span className='font-bold'>$5 taza BCV</span>
+          <p className='text-sm mt-1 lg:mt-0'>
+            <span className='font-bold'>2.</span> Haber realizado el pago de la matrícula: <span className='font-bold'>$10 taza BCV</span>
           </p>
 
-          {/* <span className='font-bold text-base inline-block mt-2'>Horarios:</span>
+          <button
+            className='bg-primary-500 text-white text-xs rounded-full px-4 py-2 mt-2 w-full font-bold'
+            onClick={handleOpenBancaryData}
+            type='button'
+          >
+            Ver Datos Bancarios
+          </button>
+        </div>
 
-          <p className='text-sm'>
-            <span className='font-bold'>Presencial: </span> Sabados de 9:00 am a 11:00 am
+        <div className='w-full h-full p-6 bg-white rounded-xl mt-4'>
+          <span className='font-bold text-base'>Horarios</span>
+          <p className='text-sm mt-1 lg:mt-0'>
+            <span className='font-bold'>Presencial: </span> <br className='lg:hidden' /> Sabados de 9:00 am a 11:00 am
           </p>
 
-          <p className='text-sm'>
-            <span className='font-bold'>Online: </span>Jueves de 7:30 pm a 9:00 pm
-          </p> */}
+          <p className='text-sm mt-1 lg:mt-0'>
+            <span className='font-bold'>Online: </span> <br className='lg:hidden' /> Jueves de 7:30 pm a 9:00 pm
+          </p>
         </div>
 
         <div className='w-full h-full p-6 bg-white rounded-xl mt-4'>
@@ -98,7 +146,7 @@ export const IntituteBibleFrom = () => {
 
           <p className='text-xs'>
             Los cursos serán ofrecidos en la Iglesia <span className='font-bold'>La Casa de mi Padre</span>
-          </p>  
+          </p>
 
           <div className='mt-1'>
             <label
@@ -250,8 +298,8 @@ export const IntituteBibleFrom = () => {
                 file:mr-4 file:py-2 file:px-4
                 file:rounded-full file:border-0
                 file:text-sm file:font-semibold
-                file:bg-violet-50 file:text-violet-700
-                hover:file:bg-violet-100
+                file:bg-blue-50 file:text-blue-700
+                hover:file:bg-blue-100
               '/>
             </label>
           </div>

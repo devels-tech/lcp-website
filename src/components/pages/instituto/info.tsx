@@ -6,7 +6,7 @@ export const IntituteBibleInfo = () => {
         <h4 className='font-bold text-2xl mt-4 hidden lg:inline-block'>Instituto Bíblico</h4>
 
         <h6>
-          <span className='font-bold'>Lema:</span> <q>“Informa, forma y transforma&quot;.</q>
+          <span className='font-bold'>Lema:</span> <q className='italic'>Informa, forma y transforma.</q>
         </h6>
       </section>
 
