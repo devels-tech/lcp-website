@@ -117,7 +117,7 @@ export const IntituteBibleFrom = () => {
           </p>
 
           <p className='text-sm mt-1 lg:mt-0'>
-            <span className='font-bold'>2.</span> Haber realizado el pago de la matrícula: <span className='font-bold'>$10 taza BCV</span>
+            <span className='font-bold'>2.</span> Haber realizado el pago de la matrícula: <span className='font-bold'>$10 tasa BCV</span>
           </p>
 
           <button
