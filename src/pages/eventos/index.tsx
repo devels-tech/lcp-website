@@ -8,7 +8,7 @@ import { PAGE_INFO } from '@/config'
 import { Event } from '@/components/pages/eventos/Event'
 // import { Event } from '@/components/pages/eventos/Event'
 // import audicionesSrc from 'public/img/local-events/audiciones.png'
-// import bautizosImgSrc from 'public/img/local-events/bautizoBg.webp'
+import bautizosImgSrc from 'public/img/local-events/bautizoBg.webp'
 import edcImgSrc from 'public/img/local-events/edc.webp'
 import ebdvImgSrc from 'public/img/local-events/ebdv.jpeg'
 // import { Event } from '@/components/pages/eventos/Event'
@@ -49,14 +49,14 @@ export const EventosPage: Page = () => {
               />
             </li>
 
-            {/* <li>
+            <li>
               <Event
                 imgSrc={bautizosImgSrc}
                 title='Bautizos'
                 redirectTo='/eventos/bautizos'
                 redirectLabel='Inscripción de Bautizos'
               />
-            </li> */}
+            </li>
 
             {/* <li>
               <Event

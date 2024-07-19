@@ -25,6 +25,11 @@ export const rules = {
     required: { value: true, message: 'Campo Requerido' }
   },
 
+
+  level: {
+    required: { value: true, message: 'Nivel Requerido' }
+  },
+
   dateBirth: {
     required: { value: true, message: 'Campo Requerido' }
   },
