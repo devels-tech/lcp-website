@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "@formkit/tempo": "^0.1.2",
     "@tailwindcss/line-clamp": "0.4.2",
     "@tailwindcss/typography": "0.5.9",
     "@tanem/react-nprogress": "5.0.26",
