@@ -19,19 +19,16 @@ interface IntituteBibleData {
   file: FileList
 }
 
-
-
-
 const BancaryData = ({ close }) => {
   return (
     <div className='w-screen h-screen bg-zinc-800/50 fixed top-0 left-0 flex flex-col justify-center items-center z-50'>
       <div className='max-w-xs w-full bg-white rounded-md p-4 flex flex-col justify-center items-center'>
         <div className='pt-2 text-center'>
           <div className='w-full text-left text-sm'>
-          <span className='font-bold text-2xl'>Datos Bancarios</span> <br />
+            <span className='font-bold text-2xl'>Datos Bancarios</span> <br />
             <span className='font-bold'>Transferencia</span>
           </div>
-          
+
           <div className='text-left mt-4'>
             <p>Banesco Cta. Cte.</p>
             <p>0134-0366-0136-6129-0259</p>
@@ -55,7 +52,7 @@ const BancaryData = ({ close }) => {
 }
 
 export const IntituteBibleFrom = () => {
-  const { handleSubmit, register, formState: { errors }, reset, watch } = useForm<IntituteBibleData>({ 
+  const { handleSubmit, register, formState: { errors }, reset, watch } = useForm<IntituteBibleData>({
     defaultValues: { modality: 'Presencial' }
   })
 

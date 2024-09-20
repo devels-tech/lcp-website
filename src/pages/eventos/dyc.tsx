@@ -10,7 +10,7 @@ import { DycEventHeader } from '@/components/pages/eventos/dyc/header'
 
 const { SEO } = PAGE_INFO
 
-export const DycPage: Page   = () => {
+export const DycPage: Page = () => {
   return (
     <div className='max-w-xl mx-auto w-full py-10 min-h-screen h-full flex flex-col justify-center items-center text-center'>
       <DycEventHeader />
@@ -18,7 +18,6 @@ export const DycPage: Page   = () => {
     </div>
   )
 }
-
 
 DycPage.getLayout = (page: ReactNode) => (
   <MainLayout>

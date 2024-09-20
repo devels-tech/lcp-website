@@ -9,7 +9,7 @@ export const rules = {
   ci: {
     required: { value: true, message: '* Requerido' },
     maxLength: { value: 8, message: '* Maximo 8 caracteres' },
-    minLength: { value: 7, message: '* Minimo 7 caracteres' },
+    minLength: { value: 7, message: '* Minimo 7 caracteres' }
   },
 
   phone: {
@@ -33,5 +33,5 @@ export const rules = {
 
   dateBirth: {
     required: { value: true, message: '* Requerido' }
-  },
+  }
 }

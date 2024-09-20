@@ -27,7 +27,7 @@ export interface IDataFormDyc {
 
 export const FormDyc = () => {
   const [loading, setLoading] = useState(false)
-  
+
   const { register, handleSubmit, formState: { errors }, reset } = useForm<IDataFormDyc>({
     defaultValues: {
       headquarters: LcpHeadQuarters.LCP_Caracas
@@ -87,7 +87,6 @@ export const FormDyc = () => {
           </select>
           {errors?.headquarters && <p className='text-sm text-red-600'>{errors?.headquarters.message}</p>}
         </div>
-
 
         <div className='text-left'>
           <div className='w-full'>

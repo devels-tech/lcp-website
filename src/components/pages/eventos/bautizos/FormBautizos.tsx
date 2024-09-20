@@ -24,7 +24,7 @@ interface IDataFormReservation {
 export const FormBautizos = () => {
   const [showGuide, setShowGuide] = useState(false)
   const [loading, setLoading] = useState(false)
-  
+
   const { register, handleSubmit, formState: { errors }, reset } = useForm<IDataFormReservation>()
   const router = useRouter()
 
@@ -80,7 +80,6 @@ export const FormBautizos = () => {
           </select>
           {errors.civilState && <p className='text-sm text-red-600'>{errors.civilState.message}</p>}
         </div>
-
 
         <div className='text-left'>
           <input
