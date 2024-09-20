@@ -2,19 +2,34 @@ import Head from 'next/head'
 // import Link from 'next/link'
 
 // import { useEvents } from '@/lib/hooks/useEvents'
+import { Event } from '@/components/pages/eventos/Event'
 import { Page, ReactNode } from '@/lib/types'
 import MainLayout from '@/layouts/Main'
 import { PAGE_INFO } from '@/config'
-import { Event } from '@/components/pages/eventos/Event'
+import Link from 'next/link'
 // import { Event } from '@/components/pages/eventos/Event'
 // import audicionesSrc from 'public/img/local-events/audiciones.png'
-import bautizosImgSrc from 'public/img/local-events/bautizoBg.webp'
-import edcImgSrc from 'public/img/local-events/edc.webp'
-import ebdvImgSrc from 'public/img/local-events/ebdv.jpeg'
-import Link from 'next/link'
+// import bautizosImgSrc from 'public/img/local-events/bautizoBg.webp'
+// import edcImgSrc from 'public/img/local-events/edc.webp'
+// import ebdvImgSrc from 'public/img/local-events/ebdv.jpeg'
+import dycImage from 'public/img/local-events/dyc.jpg'
 // import { Event } from '@/components/pages/eventos/Event'
 
 const { SEO } = PAGE_INFO
+
+const EmptyEvents = () => {
+  return (
+    <div className='pt-20 text-center'>
+      <span className='text-4xl md:text-7xl font-black text-gray-900'>Sin Eventos</span>
+
+      <br />
+
+      <Link href='/' className='text-lg text-secondary-500 xl:text-xl underline underline-offset-1'>
+        Ir al inicio
+      </Link>
+    </div>
+  )
+}
 
 export const EventosPage: Page = () => {
   // const { events } = useEvents()
@@ -28,17 +43,21 @@ export const EventosPage: Page = () => {
 
       <div className='min-h-screen md:min-h-0 w-full pb-4 px-4'>
         <div className='w-full h-full flex flex-col justify-center items-center pt-32 md:pt-32'>
-        <div className='pt-20 text-center'>
-                <span className='text-4xl md:text-7xl font-black text-gray-900'>Sin Eventos</span>
-                <br />
-                <Link href='/' className='text-lg text-secondary-500 xl:text-xl underline underline-offset-1'>
-                  Ir al inicio
-                </Link>
-              </div>
-          {/* <span className='text-4xl md:text-7xl font-black text-gray-900'>Eventos</span>
-          <br /> */}
+          {/* <EmptyEvents /> */}
 
-          {/* <ul className='flex flex-wrap justify-center items-center max-w-5xl gap-6'> */}
+          <span className='text-4xl md:text-7xl font-black text-gray-900'>Eventos</span>
+          <br />
+
+          <ul className='flex flex-wrap justify-center items-center max-w-5xl gap-6'>
+            <li>
+              <Event
+                imgSrc={dycImage}
+                title='Congreso de danza'
+                redirectTo='/eventos/dyc'
+                redirectLabel='Congreso de danza'
+              />
+            </li>
+
             {/* <li>
               <Event
                 localImage={ebdvImgSrc}
@@ -74,7 +93,7 @@ export const EventosPage: Page = () => {
                 redirectLabel='Ministerio de Alabanza - Audiciones'
               />
             </li> */}
-          {/* </ul> */}
+          </ul>
 
           {/* <Link href='/'>
             <a className='text-lg text-secondary-500 xl:text-xl underline underline-offset-1'>Ir al inicio</a>

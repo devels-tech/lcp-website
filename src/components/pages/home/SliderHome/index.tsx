@@ -1,7 +1,7 @@
 import SwiperCore, { Pagination, Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useEffect, useState } from 'react'
-// import Image from 'next/image'
+import Image from 'next/image'
 
 import { useMediaQuery } from '@/lib/hooks/useMediaQuery'
 import { handleFetchErrors } from '@/lib/utils/handleFetchErrors'
@@ -12,7 +12,7 @@ import { ButtonScroll } from '@/components/common/ButtonScroll'
 import { Banner } from './Items/Banner'
 import { DefaultItem } from './Items'
 
-// import banner4 from 'public/img/banner/abril.jpeg'
+import dycImage from 'public/img/banner/dyc.jpg'
 
 import 'swiper/css/bundle'
 import 'swiper/css/pagination'
@@ -47,6 +47,17 @@ export const Slider = () => {
         <Swiper {...configSwiper} className='h-full'>
           <SwiperSlide>
             <DefaultItem />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <Image
+              src={dycImage}
+              alt='La Casa de mi Padre'
+              placeholder='blur'
+              className='w-full h-full object-cover'
+              quality={100}
+              priority
+            />
           </SwiperSlide>
 
           {
