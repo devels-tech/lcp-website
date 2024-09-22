@@ -13,6 +13,7 @@ import { Banner } from './Items/Banner'
 import { DefaultItem } from './Items'
 
 import dycImage from 'public/img/banner/dyc.jpg'
+import dycImageMobile from 'public/img/banner/dyc-mobile.jpg'
 
 import 'swiper/css/bundle'
 import 'swiper/css/pagination'
@@ -46,19 +47,35 @@ export const Slider = () => {
 
         <Swiper {...configSwiper} className='h-full'>
           <SwiperSlide>
-            <DefaultItem />
+            <div className='h-full'>
+              <div className='hidden sm:block'>
+                <Image
+                  src={dycImage}
+                  alt='La Casa de mi Padre'
+                  placeholder='blur'
+                  className='w-full h-full object-cover 2xl:-mt-36'
+                  quality={100}
+                  priority
+                />
+              </div>
+
+              <div className='sm:hidden'>
+                <Image
+                  src={dycImageMobile}
+                  alt='La Casa de mi Padre'
+                  placeholder='blur'
+                  className='w-full h-full object-cover'
+                  quality={100}
+                  priority
+                />
+              </div>
+            </div>
           </SwiperSlide>
 
           <SwiperSlide>
-            <Image
-              src={dycImage}
-              alt='La Casa de mi Padre'
-              placeholder='blur'
-              className='w-full h-full object-cover'
-              quality={100}
-              priority
-            />
+            <DefaultItem />
           </SwiperSlide>
+
 
           {
             isDesktop && (
