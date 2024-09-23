@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
 import { useState } from 'react'
 
-import { registerUserDyc } from './registerUserBautizos'
+import { registerUserDyc } from './registerUserDyc'
 import { handleOnlyNumbers } from '@/lib/utils/only-numbers'
 import { rules } from './formConfig'
 
@@ -11,9 +11,13 @@ import { Loading } from '@/components/common/Loaders/global-loading'
 import { Button } from '@/components/common/Button'
 
 export enum LcpHeadQuarters {
-  LCP_Caracas = 'LCP - Caracas',
+  LCP_CARACAS = 'LCP - Caracas',
   LCP_SJM = 'LCP - San Juan de los Morros',
-  LCP_LA_PASTORA = 'LCP - La Pastora'
+  LCP_LA_PASTORA = 'LCP - La Pastora',
+  LCP_CHARALLAVE = 'LCP - Charallave',
+  LCP_ALTAMIRA = 'LCP - Altamira',
+  LCP_GUAIRA = 'LCP - La Guaira',
+  LCP_MARACAY = 'LCP - Maracay'
 }
 
 export interface IDataFormDyc {
@@ -30,7 +34,7 @@ export const FormDyc = () => {
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<IDataFormDyc>({
     defaultValues: {
-      headquarters: LcpHeadQuarters.LCP_Caracas
+      headquarters: LcpHeadQuarters.LCP_CARACAS
     }
   })
   const router = useRouter()
@@ -81,9 +85,13 @@ export const FormDyc = () => {
             placeholder='Sede LCP'
             {...register('headquarters', rules.headquarters)}
           >
-            <option className='text-black' value={LcpHeadQuarters.LCP_Caracas}>{LcpHeadQuarters.LCP_Caracas}</option>
+            <option className='text-black' value={LcpHeadQuarters.LCP_CARACAS}>{LcpHeadQuarters.LCP_CARACAS}</option>
+            <option className='text-black' value={LcpHeadQuarters.LCP_GUAIRA}>{LcpHeadQuarters.LCP_GUAIRA}</option>
             <option className='text-black' value={LcpHeadQuarters.LCP_LA_PASTORA}>{LcpHeadQuarters.LCP_LA_PASTORA}</option>
+            <option className='text-black' value={LcpHeadQuarters.LCP_ALTAMIRA}>{LcpHeadQuarters.LCP_ALTAMIRA}</option>
+            <option className='text-black' value={LcpHeadQuarters.LCP_CHARALLAVE}>{LcpHeadQuarters.LCP_CHARALLAVE}</option>
             <option className='text-black' value={LcpHeadQuarters.LCP_SJM}>{LcpHeadQuarters.LCP_SJM}</option>
+            <option className='text-black' value={LcpHeadQuarters.LCP_MARACAY}>{LcpHeadQuarters.LCP_MARACAY}</option>
           </select>
           {errors?.headquarters && <p className='text-sm text-red-600'>{errors?.headquarters.message}</p>}
         </div>

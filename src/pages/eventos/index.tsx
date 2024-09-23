@@ -54,7 +54,7 @@ export const EventosPage: Page = () => {
                 imgSrc={dycImage}
                 title='Congreso de danza'
                 redirectTo='/eventos/dyc'
-                redirectLabel='Congreso de danza'
+                redirectLabel='Registrarse'
               />
             </li>
 
