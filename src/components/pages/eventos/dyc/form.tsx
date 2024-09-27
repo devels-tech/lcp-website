@@ -11,13 +11,14 @@ import { Loading } from '@/components/common/Loaders/global-loading'
 import { Button } from '@/components/common/Button'
 
 export enum LcpHeadQuarters {
-  LCP_CARACAS = 'LCP - Caracas',
+  LCP_CARACAS = 'LCP - Sede Principal',
   LCP_SJM = 'LCP - San Juan de los Morros',
-  LCP_LA_PASTORA = 'LCP - La Pastora',
+  BETHEL = 'Bethel',
   LCP_CHARALLAVE = 'LCP - Charallave',
   LCP_ALTAMIRA = 'LCP - Altamira',
   LCP_GUAIRA = 'LCP - La Guaira',
-  LCP_MARACAY = 'LCP - Maracay'
+  LCP_MARACAY = 'LCP - Maracay',
+  ANOTHER = 'Ingresar otro'
 }
 
 export interface IDataFormDyc {
@@ -27,21 +28,23 @@ export interface IDataFormDyc {
   dateBirth: string
   ci: string
   headquarters: LcpHeadQuarters
+  anotherHeadquarters: string
 }
 
 export const FormDyc = () => {
   const [loading, setLoading] = useState(false)
 
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<IDataFormDyc>({
+  const { register, handleSubmit, formState: { errors }, reset, watch } = useForm<IDataFormDyc>({
     defaultValues: {
       headquarters: LcpHeadQuarters.LCP_CARACAS
     }
   })
+
   const router = useRouter()
+  const headquartersWatch = watch('headquarters')
 
   const onSubmit = async (data: IDataFormDyc) => {
     setLoading(true)
-
     const { data: resData } = await registerUserDyc(data)
 
     if (!resData) {
@@ -72,27 +75,52 @@ export const FormDyc = () => {
             className='font-bold'
             htmlFor='level'
           >
-            Sede LCP
+            Iglesia
           </label>
 
-          <p className='text-xs'>Seleccione la sede a la que pertenece</p>
+          <p className='text-xs'>Seleccione o ingrese la iglesia a la que pertenece</p>
 
-          <select
-            id='headquarters'
-            name='headquarters'
-            tabIndex={1}
-            className='relative w-full px-3 py-1.5 my-2 bg-[rgba(255,255,255,.13)] rounded-2xl border border-solid border-black outline-none appearance-none leading-8'
-            placeholder='Sede LCP'
-            {...register('headquarters', rules.headquarters)}
-          >
-            <option className='text-black' value={LcpHeadQuarters.LCP_CARACAS}>{LcpHeadQuarters.LCP_CARACAS}</option>
-            <option className='text-black' value={LcpHeadQuarters.LCP_GUAIRA}>{LcpHeadQuarters.LCP_GUAIRA}</option>
-            <option className='text-black' value={LcpHeadQuarters.LCP_LA_PASTORA}>{LcpHeadQuarters.LCP_LA_PASTORA}</option>
-            <option className='text-black' value={LcpHeadQuarters.LCP_ALTAMIRA}>{LcpHeadQuarters.LCP_ALTAMIRA}</option>
-            <option className='text-black' value={LcpHeadQuarters.LCP_CHARALLAVE}>{LcpHeadQuarters.LCP_CHARALLAVE}</option>
-            <option className='text-black' value={LcpHeadQuarters.LCP_SJM}>{LcpHeadQuarters.LCP_SJM}</option>
-            <option className='text-black' value={LcpHeadQuarters.LCP_MARACAY}>{LcpHeadQuarters.LCP_MARACAY}</option>
-          </select>
+          {
+          headquartersWatch === LcpHeadQuarters.ANOTHER
+            ? (
+              <>
+                {errors?.anotherHeadquarters && <p className='text-sm text-red-600 font-bold'>{errors?.anotherHeadquarters.message}</p>}
+
+                <input
+                  aria-label='anotherHeadquarters'
+                  name='anotherHeadquarters'
+                  {...register('anotherHeadquarters', { required: { value: true, message: '* Requerido' } })}
+                  type='text'
+                  autoCapitalize='word'
+                  className='inputText mt-1'
+                  autoComplete='on'
+                  tabIndex={2}
+                  placeholder='Ingrese el nombre de su iglesia'
+                  maxLength={80}
+                />
+              </>
+            )
+            : (
+              <select
+                id='headquarters'
+                name='headquarters'
+                tabIndex={1}
+                className='relative w-full px-3 py-1.5 my-2 bg-[rgba(255,255,255,.13)] rounded-2xl border border-solid border-black outline-none appearance-none leading-8'
+                placeholder='Sede LCP'
+                {...register('headquarters', rules.headquarters)}
+              >
+                <option className='text-black' value={LcpHeadQuarters.LCP_CARACAS}>{LcpHeadQuarters.LCP_CARACAS}</option>
+                <option className='text-black' value={LcpHeadQuarters.LCP_GUAIRA}>{LcpHeadQuarters.LCP_GUAIRA}</option>
+                <option className='text-black' value={LcpHeadQuarters.BETHEL}>{LcpHeadQuarters.BETHEL}</option>
+                <option className='text-black' value={LcpHeadQuarters.LCP_ALTAMIRA}>{LcpHeadQuarters.LCP_ALTAMIRA}</option>
+                <option className='text-black' value={LcpHeadQuarters.LCP_CHARALLAVE}>{LcpHeadQuarters.LCP_CHARALLAVE}</option>
+                <option className='text-black' value={LcpHeadQuarters.LCP_SJM}>{LcpHeadQuarters.LCP_SJM}</option>
+                <option className='text-black' value={LcpHeadQuarters.LCP_MARACAY}>{LcpHeadQuarters.LCP_MARACAY}</option>
+                <option className='text-black' value={LcpHeadQuarters.ANOTHER}>Ingresar otro</option>
+              </select>
+            )
+          }
+
           {errors?.headquarters && <p className='text-sm text-red-600'>{errors?.headquarters.message}</p>}
         </div>
 
@@ -114,6 +142,7 @@ export const FormDyc = () => {
               className='inputText mt-1'
               autoComplete='on'
               tabIndex={2}
+              maxLength={80}
               placeholder='Nombre y Apellido'
             />
           </div>

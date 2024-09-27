@@ -31,6 +31,10 @@ export const rules = {
     required: { value: true, message: '* Requerido' }
   },
 
+  anotherHeadquarters: {
+    required: { value: false }
+  },
+
   dateBirth: {
     required: { value: true, message: '* Requerido' }
   }

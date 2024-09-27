@@ -14,7 +14,7 @@ export const registerUserDyc = async (reservation: IDataFormDyc) => {
     phone: reservation.phone,
     dateBirth: reservation.dateBirth,
     ci: reservation.ci,
-    headquarters: reservation.headquarters
+    headquarters: reservation?.anotherHeadquarters || reservation.headquarters
   }
 
   console.log('saveUsersReservations => reservationToSend', reservationToSend)
