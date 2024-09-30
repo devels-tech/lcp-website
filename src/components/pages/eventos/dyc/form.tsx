@@ -11,9 +11,10 @@ import { Loading } from '@/components/common/Loaders/global-loading'
 import { Button } from '@/components/common/Button'
 
 export enum LcpHeadQuarters {
-  LCP_CARACAS = 'LCP - Sede Principal',
+  LCP_CARACAS = 'LCP - Sede Central',
   LCP_SJM = 'LCP - San Juan de los Morros',
   BETHEL = 'Bethel',
+  CATEDRAL_RENACER = 'Catedral Renacer ',
   LCP_CHARALLAVE = 'LCP - Charallave',
   LCP_ALTAMIRA = 'LCP - Altamira',
   LCP_GUAIRA = 'LCP - La Guaira',
@@ -112,6 +113,7 @@ export const FormDyc = () => {
                 <option className='text-black' value={LcpHeadQuarters.LCP_CARACAS}>{LcpHeadQuarters.LCP_CARACAS}</option>
                 <option className='text-black' value={LcpHeadQuarters.LCP_GUAIRA}>{LcpHeadQuarters.LCP_GUAIRA}</option>
                 <option className='text-black' value={LcpHeadQuarters.BETHEL}>{LcpHeadQuarters.BETHEL}</option>
+                <option className='text-black' value={LcpHeadQuarters.CATEDRAL_RENACER}>{LcpHeadQuarters.CATEDRAL_RENACER}</option>
                 <option className='text-black' value={LcpHeadQuarters.LCP_ALTAMIRA}>{LcpHeadQuarters.LCP_ALTAMIRA}</option>
                 <option className='text-black' value={LcpHeadQuarters.LCP_CHARALLAVE}>{LcpHeadQuarters.LCP_CHARALLAVE}</option>
                 <option className='text-black' value={LcpHeadQuarters.LCP_SJM}>{LcpHeadQuarters.LCP_SJM}</option>
