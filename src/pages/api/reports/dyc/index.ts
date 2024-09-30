@@ -9,7 +9,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json({
     result: {
       data: data.docs.map(item => {
-        let fullData = item.data()
+        const fullData = item.data()
 
         const dateBirth = format(fullData.dateBirth, 'DD MMMM YYYY', 'es')
 
