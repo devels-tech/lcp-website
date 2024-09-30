@@ -29,6 +29,7 @@
             2
         ],
         "no-unused-vars": "warn",
+        "import/no-anonymous-default-export": "warn",
         "no-multiple-empty-lines": "warn",
         "eol-last": "warn",
         "react/display-name": "off",
