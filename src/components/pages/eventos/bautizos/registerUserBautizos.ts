@@ -27,7 +27,7 @@ export const registerUserBautizos = async (reservation: IDataFormReservation) =>
     lcpAsisted: reservation.lcpAsisted,
     zone: reservation.zone,
     timeConverted: reservation.timeConverted,
-    profestion: reservation.profestion,
+    profestion: reservation.profestion
   }
 
   console.log('saveUsersReservations => reservationToSend', reservationToSend)
