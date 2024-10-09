@@ -12,7 +12,6 @@ interface IDataFormReservation {
   profestion: string
   timeConverted: string
   lcpAsisted: string
-  level: 'Nivel 1' | 'Nivel 2' | 'Nivel 3' | 'Nivel 4'
 }
 
 export const registerUserBautizos = async (reservation: IDataFormReservation) => {
@@ -29,7 +28,6 @@ export const registerUserBautizos = async (reservation: IDataFormReservation) =>
     zone: reservation.zone,
     timeConverted: reservation.timeConverted,
     profestion: reservation.profestion,
-    level: reservation.level
   }
 
   console.log('saveUsersReservations => reservationToSend', reservationToSend)

@@ -18,7 +18,6 @@ interface IDataFormReservation {
   profestion: string
   timeConverted: string
   lcpAsisted: string
-  level: 'Nivel 1' | 'Nivel 2' | 'Nivel 3' | 'Nivel 4'
 }
 
 export const FormBautizos = () => {
@@ -54,32 +53,6 @@ export const FormBautizos = () => {
       <form className='w-full max-w-lg mx-auto text-center px-4' onSubmit={handleSubmit(onSubmit)}>
         <h3 className='text-4xl text-secondary-500 font-black xl:text-5xl 3xl:text-6xl'>Inscripciones de <br /> Bautizos</h3>
         <br />
-
-        <div className='text-left'>
-          <label
-            className='font-bold'
-            htmlFor='level'
-          >
-            Nivel
-          </label>
-
-          <p className='text-xs'>Seleccione el nivel al que se esta inscribiendo</p>
-
-          <select
-            id='level'
-            name='level'
-            tabIndex={1}
-            className='relative w-full px-3 py-1.5 my-2 bg-[rgba(255,255,255,.13)] rounded-2xl border border-solid border-black outline-none appearance-none leading-8'
-            placeholder='Nivel 1'
-            {...register('level', rules.level)}
-          >
-            <option className='text-black' value='Nivel 1'>Nivel 1</option>
-            <option className='text-black' value='Nivel 2'>Nivel 2</option>
-            <option className='text-black' value='Nivel 3'>Nivel 3</option>
-            <option className='text-black' value='Nivel 4'>Nivel 4</option>
-          </select>
-          {errors.civilState && <p className='text-sm text-red-600'>{errors.civilState.message}</p>}
-        </div>
 
         <div className='text-left'>
           <input
