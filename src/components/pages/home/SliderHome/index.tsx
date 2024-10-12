@@ -13,6 +13,8 @@ import { Banner } from './Items/Banner'
 import { DefaultItem } from './Items'
 
 import dycImage from 'public/img/banner/dyc.jpg'
+import a20Desktop from 'public/img/banner/a20-desktop.jpg'
+import a20Mobile from 'public/img/banner/a20-mobile.jpg'
 import dycImageMobile from 'public/img/banner/dyc-mobile.jpg'
 
 import 'swiper/css/bundle'
@@ -76,6 +78,31 @@ export const Slider = () => {
             <DefaultItem />
           </SwiperSlide>
 
+          <SwiperSlide>
+            <div className='h-full'>
+              <div className='hidden sm:block'>
+                <Image
+                  src={a20Desktop}
+                  alt='La Casa de mi Padre'
+                  placeholder='blur'
+                  className='w-full h-full object-cover'
+                  quality={100}
+                  priority
+                />
+              </div>
+
+              <div className='sm:hidden'>
+                <Image
+                  src={a20Mobile}
+                  alt='La Casa de mi Padre'
+                  placeholder='blur'
+                  className='w-full h-full object-cover'
+                  quality={100}
+                  priority
+                />
+              </div>
+            </div>
+          </SwiperSlide>
 
           {
             isDesktop && (
