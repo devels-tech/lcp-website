@@ -49,14 +49,14 @@ export const EventosPage: Page = () => {
           <br />
 
           <ul className='flex flex-wrap justify-center items-center max-w-5xl gap-6'>
-            <li>
+            {/* <li>
               <Event
                 imgSrc={dycImage}
                 title='Congreso de danza'
                 redirectTo='/eventos/dyc'
                 redirectLabel='Registrarse'
               />
-            </li>
+            </li> */}
 
             <li>
               <Event
