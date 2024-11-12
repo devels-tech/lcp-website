@@ -12,9 +12,6 @@ import { ButtonScroll } from '@/components/common/ButtonScroll'
 import { Banner } from './Items/Banner'
 import { DefaultItem } from './Items'
 
-import a20Desktop from 'public/img/banner/a20-desktop.jpg'
-import a20Mobile from 'public/img/banner/a20-mobile.jpg'
-
 import 'swiper/css/bundle'
 import 'swiper/css/pagination'
 
@@ -50,7 +47,7 @@ export const Slider = () => {
             <DefaultItem />
           </SwiperSlide>
 
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <div className='h-full'>
               <div className='hidden sm:block'>
                 <Image
@@ -74,7 +71,7 @@ export const Slider = () => {
                 />
               </div>
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
 
           {
             isDesktop && (
