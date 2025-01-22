@@ -13,11 +13,11 @@ export const EDCPage: Page = () => {
         <title>{PAGE_INFO.SEO.TITLE} - EDC</title>
       </Head>
 
-      <div className='min-h-screen-14 max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-center items-center px-4 gap-5'>
+      <div className='min-h-screen-14 max-w-7xl mx-auto w-full flex flex-col justify-center items-center px-4 gap-5'>
         <div className='md:mt-20'>
           <img
             src='/img/local-events/edc.webp'
-            className='rounded-md'
+            className='rounded-md max-w-lg w-full'
             alt='Escuela de Crecimiento'
           />
         </div>
