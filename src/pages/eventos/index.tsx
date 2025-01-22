@@ -67,7 +67,7 @@ export const EventosPage: Page = () => {
               />
             </li>  */}
 
-<li>
+            <li>
               <Event
                 localImage={edcImgSrc}
                 title='Inscripciones EDC'
@@ -84,8 +84,6 @@ export const EventosPage: Page = () => {
                 redirectLabel='Inscripciones EBDV'
               />
             </li>
-
-         
 
  */}
 

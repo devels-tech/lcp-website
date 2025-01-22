@@ -82,45 +82,45 @@ export const FormDyc = () => {
           <p className='text-xs'>Seleccione o ingrese la iglesia a la que pertenece</p>
 
           {
-          headquartersWatch === LcpHeadQuarters.ANOTHER
-            ? (
-              <>
-                {errors?.anotherHeadquarters && <p className='text-sm text-red-600 font-bold'>{errors?.anotherHeadquarters.message}</p>}
+            headquartersWatch === LcpHeadQuarters.ANOTHER
+              ? (
+                <>
+                  {errors?.anotherHeadquarters && <p className='text-sm text-red-600 font-bold'>{errors?.anotherHeadquarters.message}</p>}
 
-                <input
-                  aria-label='anotherHeadquarters'
-                  name='anotherHeadquarters'
-                  {...register('anotherHeadquarters', { required: { value: true, message: '* Requerido' } })}
-                  type='text'
-                  autoCapitalize='word'
-                  className='inputText mt-1'
-                  autoComplete='on'
-                  tabIndex={2}
-                  placeholder='Ingrese el nombre de su iglesia'
-                  maxLength={80}
-                />
-              </>
-            )
-            : (
-              <select
-                id='headquarters'
-                name='headquarters'
-                tabIndex={1}
-                className='relative w-full px-3 py-1.5 my-2 bg-[rgba(255,255,255,.13)] rounded-2xl border border-solid border-black outline-none appearance-none leading-8'
-                placeholder='Sede LCP'
-                {...register('headquarters', rules.headquarters)}
-              >
-                <option className='text-black' value={LcpHeadQuarters.LCP_CARACAS}>{LcpHeadQuarters.LCP_CARACAS}</option>
-                <option className='text-black' value={LcpHeadQuarters.LCP_GUAIRA}>{LcpHeadQuarters.LCP_GUAIRA}</option>
-                <option className='text-black' value={LcpHeadQuarters.BETHEL}>{LcpHeadQuarters.BETHEL}</option>
-                <option className='text-black' value={LcpHeadQuarters.CATEDRAL_RENACER}>{LcpHeadQuarters.CATEDRAL_RENACER}</option>
-                <option className='text-black' value={LcpHeadQuarters.LCP_ALTAMIRA}>{LcpHeadQuarters.LCP_ALTAMIRA}</option>
-                <option className='text-black' value={LcpHeadQuarters.LCP_CHARALLAVE}>{LcpHeadQuarters.LCP_CHARALLAVE}</option>
-                <option className='text-black' value={LcpHeadQuarters.LCP_SJM}>{LcpHeadQuarters.LCP_SJM}</option>
-                <option className='text-black' value={LcpHeadQuarters.LCP_MARACAY}>{LcpHeadQuarters.LCP_MARACAY}</option>
-                <option className='text-black' value={LcpHeadQuarters.ANOTHER}>Ingresar otro</option>
-              </select>
-            )
+                  <input
+                    aria-label='anotherHeadquarters'
+                    name='anotherHeadquarters'
+                    {...register('anotherHeadquarters', { required: { value: true, message: '* Requerido' } })}
+                    type='text'
+                    autoCapitalize='word'
+                    className='inputText mt-1'
+                    autoComplete='on'
+                    tabIndex={2}
+                    placeholder='Ingrese el nombre de su iglesia'
+                    maxLength={80}
+                  />
+                </>
+              )
+              : (
+                <select
+                  id='headquarters'
+                  name='headquarters'
+                  tabIndex={1}
+                  className='relative w-full px-3 py-1.5 my-2 bg-[rgba(255,255,255,.13)] rounded-2xl border border-solid border-black outline-none appearance-none leading-8'
+                  placeholder='Sede LCP'
+                  {...register('headquarters', rules.headquarters)}
+                >
+                  <option className='text-black' value={LcpHeadQuarters.LCP_CARACAS}>{LcpHeadQuarters.LCP_CARACAS}</option>
+                  <option className='text-black' value={LcpHeadQuarters.LCP_GUAIRA}>{LcpHeadQuarters.LCP_GUAIRA}</option>
+                  <option className='text-black' value={LcpHeadQuarters.BETHEL}>{LcpHeadQuarters.BETHEL}</option>
+                  <option className='text-black' value={LcpHeadQuarters.CATEDRAL_RENACER}>{LcpHeadQuarters.CATEDRAL_RENACER}</option>
+                  <option className='text-black' value={LcpHeadQuarters.LCP_ALTAMIRA}>{LcpHeadQuarters.LCP_ALTAMIRA}</option>
+                  <option className='text-black' value={LcpHeadQuarters.LCP_CHARALLAVE}>{LcpHeadQuarters.LCP_CHARALLAVE}</option>
+                  <option className='text-black' value={LcpHeadQuarters.LCP_SJM}>{LcpHeadQuarters.LCP_SJM}</option>
+                  <option className='text-black' value={LcpHeadQuarters.LCP_MARACAY}>{LcpHeadQuarters.LCP_MARACAY}</option>
+                  <option className='text-black' value={LcpHeadQuarters.ANOTHER}>Ingresar otro</option>
+                </select>
+              )
           }
 
           {errors?.headquarters && <p className='text-sm text-red-600'>{errors?.headquarters.message}</p>}
